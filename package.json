@@ -1,0 +1,30 @@
+{
+  "name": "battlebrigades-subreddit-CSS",
+  "description": "/r/BattleBrigades SubReddit Theme",
+  "version": "0.1.0",
+  "homepage": "http://www.inkhorn.co",
+  "keywords": [
+    "battle brigades,css,theme,stylus"
+  ],
+  "maintainers": [
+    {
+      "name": "Inkhorn Games",
+      "email": "contact@inkhorn.co",
+      "web": "http://www.inkhorn.co"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/InkhornGames/battlebrigades-subreddit-CSS/issues"
+  },
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/InkhornGames/battlebrigades-subreddit-CSS.git"
+  },
+  "dependencies": {
+    "axis": "^0.4.1",
+    "jeet": "^6.1.2",
+    "nib": "^1.1.0",
+    "rupture": "^0.6.1",
+    "stylus": "^0.51.1"
+  }
+}
