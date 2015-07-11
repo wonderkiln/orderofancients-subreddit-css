@@ -1,24 +1,24 @@
 {
-  "name": "battlebrigades-subreddit-CSS",
-  "description": "/r/BattleBrigades SubReddit Theme",
-  "version": "0.1.0",
-  "homepage": "https://www.reddit.com/r/battlebrigades/",
+  "name": "orderofancients-subreddit-css",
+  "description": "/r/OrderOfAncients SubReddit Theme",
+  "version": "0.1.1",
+  "homepage": "https://www.reddit.com/r/orderofancients/",
   "keywords": [
     "battle brigades,css,theme,stylus"
   ],
   "maintainers": [
     {
       "name": "Inkhorn Games",
-      "email": "contact@inkhorn.co",
-      "web": "http://www.inkhorn.co"
+      "email": "contact@inkhorngames.com",
+      "web": "http://www.inkhorngames.com"
     }
   ],
   "bugs": {
-    "url": "https://github.com/InkhornGames/battlebrigades-subreddit-CSS/issues"
+    "url": "https://github.com/InkhornGames/orderofancients-subreddit-css/issues"
   },
   "repository": {
       "type": "git",
-      "url": "https://github.com/InkhornGames/battlebrigades-subreddit-CSS.git"
+      "url": "https://github.com/InkhornGames/orderofancients-subreddit-css.git"
   },
   "dependencies": {
     "axis": "^0.4.1",
