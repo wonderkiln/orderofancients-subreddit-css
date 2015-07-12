@@ -9,7 +9,7 @@ We are 100% open to pull requests and enhancements and also encourage the use of
 
 How to Run/Test/etc
 =======================
-Setup is simple...
+Setup is super simple...  
 1. Run `npm install` within the directory  
 2. Then to compile css just run `$ stylus style.styl -w`.
 > _The `-w` commands makes Stylus watch and automatically recompile when changes are made._
