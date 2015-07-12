@@ -17,7 +17,7 @@ body:not(.loggedin) #header-bottom-right {
   max-width: 340px;
 }
 body > .content {
-  margin: 96px 332px 0 16px;
+  margin: 150px 332px 0 16px;
   padding: 0;
   border-radius: 2px;
   animation-name: fadein;
@@ -158,7 +158,7 @@ textarea:active,
 button {
   margin: 4px 16px 4px 0;
   padding: 2px 18px;
-  background-color: #516ae8;
+  background-color: red-500;
   border: none;
   border-radius: 2px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.24);
@@ -381,7 +381,7 @@ button:focus {
   padding: 12px 16px;
   width: 100%;
   border-radius: 2px;
-  background-color: #516ae8;
+  background-color: red-500;
   font-family: verdana, arial, sans-serif;
   transition: all 0.25s ease;
   color: #fff;
@@ -777,7 +777,7 @@ button:focus {
   position: relative;
 }
 .titlebox .fancy-toggle-button .add {
-  background-color: #516ae8;
+  background-color: red-500;
   background-position: -208px -144px;
 }
 .titlebox .fancy-toggle-button .add:hover {
@@ -787,7 +787,7 @@ button:focus {
   visibility: visible;
   margin-top: 40px;
   color: #fff;
-  background-color: #516ae8;
+  background-color: red-500;
   box-shadow: 0 1px 5px rgba(0,0,0,0.24);
 }
 .titlebox .fancy-toggle-button .add:active {
@@ -1397,7 +1397,7 @@ body >.content .link .rank,
   background: url("%%spritesheet%%") -143px -140px;
 }
 .linkflair-waywo .linkflairlabel {
-  background-color: #516ae8;
+  background-color: red-500;
   color: #fff;
 }
 .linkflair-waywo .thumbnail.self {
@@ -1644,7 +1644,7 @@ a.pretty-button.negative.pressed {
   padding: 8px 16px;
   line-height: 26px;
   border: none;
-  background-color: #516ae8;
+  background-color: red-500;
   color: #fff;
   box-shadow: 0 1px 5px rgba(0,0,0,0.24);
   border-radius: 2px;
@@ -2237,7 +2237,7 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   border: 1px solid #e5e5e5;
 }
 .submit-page .content {
-  margin: 96px auto;
+  margin: 150px auto;
 }
 .submit-page #newlink.submit.content {
   width: 524px;
@@ -2268,7 +2268,7 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
 }
 .submit-page #newlink.submit.content .tabmenu.formtab .selected a {
   font-size: 16px;
-  background-color: #516ae8;
+  background-color: red-500;
   color: #fff;
 }
 .submit-page #newlink.submit.content .tabmenu.formtab .selected a:hover {
@@ -2279,7 +2279,7 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   line-height: 41px;
   height: 42px;
   margin-top: 24px;
-  background-color: #516ae8;
+  background-color: red-500;
   border: none;
   color: #fff;
   box-shadow: 0 1px 5px rgba(0,0,0,0.24);
@@ -2310,7 +2310,7 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   margin: 0;
   padding: 16px;
   color: #fff;
-  background-color: #516ae8;
+  background-color: red-500;
   border-radius: 0 0 2px 2px;
   border: none;
   margin-top: -12px;
@@ -2699,7 +2699,7 @@ html.res-commentBoxes .comment {
   transition: all 0.25s ease;
 }
 #RESMainGearOverlay {
-  background-color: #516ae8;
+  background-color: red-500;
   top: 0 !important;
   height: 26px !important;
   border-radius: 0 !important;
@@ -2711,7 +2711,7 @@ html.res-commentBoxes .comment {
   margin-right: 8px;
 }
 .RESDropdownList li {
-  background-color: #516ae8;
+  background-color: red-500;
   color: #fff;
   border-color: #4258ca;
   transition: all 0.15s ease;
@@ -2755,7 +2755,7 @@ html.res-commentBoxes .comment {
 .moduleToggle:not(.enabled) .toggleOff,
 .toggleButton:not(.enabled) .toggleOff {
   background-color: #fff;
-  color: #516ae8;
+  color: red-500;
   font-weight: bolder;
   border: 1px solid #fff;
   transition: all 0.15s ease;
