@@ -1,7 +1,2431 @@
+// Massive props to @Axel-- on Github for Naut.
+// Core base is Naut but is being heavily replaced and refined
+// Soon it will not resemble naut (Google Theming) at all.
+
+*,:before,:after
+	-webkit-box-sizing border-box
+	-moz-box-sizing border-box
+	box-sizing border-box
+
 body
-	background #fafafa
+	overflow-x hidden
+	background-color #eee
+	min-width 820px
+	&:not(.loggedin)
+		#sr-header-area
+			.width-clip
+				right 340px
+		#header-bottom-right
+			max-width 340px
+	& > .content
+		margin 96px 332px 0 16px
+		padding 0
+		border-radius 2px
+		animation-name fadein
+		animation-duration .75s
+		animation-iteration-count 1
+		-webkit-animation-name fadein
+		-webkit-animation-duration .75s
+		-webkit-animation-iteration-count 1
+		.link
+			&.compressed
+				.midcol
+					height auto
+					margin 8px 0 0 4px
+	&.listing-page
+		& > .content
+			box-shadow 0 1px 5px rgba(0,0,0,0.16)
+	&:before
+		height 166px
+		top 0
+		position absolute
+		width 100%
+		left 0
+		right 0
+		background-color #3A3D4D
+		background-image url(%%headerimg%%)
+		background-repeat no-repeat
+		background-position 50% 0
+		content ""
+		text-indent -9999px
+		z-index -1
+	.content
+		.sitetable
+			.link
+				.title
+					a
+						&:hover
+							color #4F8EF7
+
+a
+	color red-600
+	transition color .15s ease
+	&.random
+		&.choice
+			padding-top 2px
+			position relative
+			display inline-block
+			margin-top -2px
+	&.thumbnail
+		img
+			height 64px
+			width 64px
+	&.pretty-button
+		&.negative
+			background-color #fb797e
+			border-color #fb797e
+			&:hover
+				background-color #fc535a
+				border-color #fc535a
+		&.neutral
+			background-color #ddd
+			border-color #ddd
+			color #4A4F57
+			&:hover
+				background-color #ececec
+				border-color #ececec
+		&.positive
+			background-color #1ecd97
+			border-color #1ecd97
+			&:hover
+				background-color #22e1a6
+				border-color #22e1a6
+
+::focus
+	outline none!important
+
+input:not([type="submit"]),textarea,.roundfield textarea,.roundfield input[type=text],.roundfield input[type=url],.roundfield input[type=password],.roundfield input[type=number],.linefield textarea,.linefield input[type=text],.linefield input[type=password],.pretty-form input[type=text],.pretty-form textarea,.pretty-form input[type=password],.pretty-form input[type=number],.login-form-side input[type=text],.login-form-side input[type=password]
+	box-shadow none!important
+	background-color #fff
+	border 1px solid #e5e5e5
+	color #707070
+	transition all .15s ease!important
+
+input:hover,textarea:hover,.roundfield textarea:hover,.roundfield input[type=text]:hover,.roundfield input[type=url]:hover,.roundfield input[type=password]:hover,.roundfield input[type=number]:hover,.linefield textarea:hover,.linefield input[type=text]:hover,.linefield input[type=password]:hover,.pretty-form input[type=text]:hover,.pretty-form textarea:hover,.pretty-form input[type=password]:hover,.pretty-form input[type=number]:hover,.login-form-side input[type=text]:hover,.login-form-side input[type=password]:hover
+	border-color #C5C5C5
+
+input:active,textarea:active,.roundfield textarea:active,.roundfield input[type=text]:active,.roundfield input[type=url]:active,.roundfield input[type=password]:active,.roundfield input[type=number]:active,.linefield textarea:active,.linefield input[type=text]:active,.linefield input[type=password]:active,.pretty-form input[type=text]:active,.pretty-form textarea:active,.pretty-form input[type=password]:active,.pretty-form input[type=number]:active,.login-form-side input[type=text]:active,.login-form-side input[type=password]:active
+	outline none!important
+	border-color #4F8EF7
+	color #4D5763
+
+.btn,button
+	margin 4px 16px 4px 0
+	padding 2px 18px
+	background-color #516AE8
+	border none
+	border-radius 2px
+	box-shadow 0 1px 3px rgba(0,0,0,0.24)
+	color #fff!important
+	text-transform uppercase
+	font-weight 700
+	cursor default
+	transition all .25s ease
+	height 32px
+	font-size 12px
+
+.btn:hover,button:hover
+	box-shadow 0 2px 8px rgba(0,0,0,0.34)
+	background-color #5A72EE
+
+.btn:active,button:active
+	box-shadow 0 1px 4px rgba(0,0,0,0.16)
+	background-color #4059DB
+
+.btn:focus,button:focus
+	outline none
+
+#header
+	margin 0
+	height 0
+	border none
+	.pagename
+		font-size 0
+		a
+			display inline-block
+			color #fff
+			font-size 22px
+			padding 11px
+			font-weight 700
+			position relative
+			top 0
+			font-family arial
+			margin 0 4px
+			vertical-align top
+			transition background-color .25s ease
+			font-variant normal
+			&:hover
+				text-decoration none
+				background-color rgba(0,0,0,0.08)
+			&:before
+				content "/r/"
+				font-size 18px
+				font-variant normal
+				letter-spacing 1px
+	.tabmenu
+		border none
+		margin 0
+		ul
+			li
+				margin 0!important
+		li
+			a
+				display inline-block
+				margin 0 7px
+				padding 16px
+				background-color transparent
+				border 0
+				border-radius 0
+				color rgba(255,255,255,0.6)
+				text-transform uppercase
+				font-weight 400
+				font-size 14px
+				font-family Arial,sans-serif
+				transition color .25s ease,background-color .25s ease
+				color #fff
+				&:hover
+					color rgba(255,255,255,1)
+					background-color rgba(0,0,0,0.08)
+			&.selected
+				a
+					padding 16px 16px 14px
+					background-color transparent
+					border 0
+					border-bottom 2px solid #fff
+					color rgba(255,255,255,1)
+					font-weight 700
+					&:hover
+						background-color rgba(0,0,0,0.08)
+
+#sr-header-area
+	background-color rgba(0,0,0,0.05)
+	border 0 solid
+	transition all .15s ease
+	height 24px
+	line-height 23px
+	.width-clip
+		right 300px
+	.sr-list
+		margin-right 48px
+	.dropdown
+		&.srdrop
+			.selected
+				margin 0 12px 0 8px
+				padding 0
+				background-image none
+				&:hover
+					text-decoration underline
+				&:after
+					position relative
+					content "▼"
+					margin-left 4px
+					font-size 10px
+	.drop-choices
+		&.srdrop
+			background-color #fff
+			border none
+			box-shadow 0 2px 3px rgba(0,0,0,0.15)
+		a
+			&.choice
+				border-bottom 1px solid #edeeee
+				color #4D5763
+				padding 2px
+				&:hover
+					background-color #f1f1f1
+
+#sr-header-area .sr-bar a,#sr-more-link,#sr-header-area .separator,#sr-header-area .dropdown.srdrop .selected
+	background-color transparent
+	color rgba(255,255,255,0.6)
+	transition all .15s ease
+
+#sr-header-area:hover .sr-bar a,#sr-header-area:hover #sr-more-link,#sr-header-area:hover .seperator,#sr-header-area:hover .dropdown.srdrop .selected
+	color rgba(255,255,255,1)
+
+#sr-header-area .sr-bar a:hover,#sr-more-link:hover,#sr-header-area .dropdown.srdrop .selected:hover
+	background-color transparent
+	border 0 solid
+	transition all .15s ease
+
+#header-img.default-header,#header-img
+	z-index 99
+	width 0
+	padding-left 48px
+	height 48px
+	background-image url(%%spritesheet%%)
+	background-position -208px -48px
+	position relative
+	top 0
+	margin 0
+
+#header-img.default-header:hover,#header-img:hover
+	background-position -208px -96px
+
+#header-bottom-left
+	position absolute
+	top 60px
+	left 18%
+
+#header .tabmenu li a,.pagename a
+	text-shadow 0 1px 8px rgba(0,0,0,0.5)
+
+.listing-page .tabmenu li > a[href$="/rising/"],.wiki-page .tabmenu li > a[href$="/rising/"],.listing-page .tabmenu li > a[href$="/controversial/"],.wiki-page .tabmenu li > a[href$="/controversial/"],.listing-page .tabmenu li > a[href$="/promoted/"],.wiki-page .tabmenu li > a[href$="/promoted/"],.listing-page .tabmenu li > a[href$="/gilded/"],.wiki-page .tabmenu li > a[href$="/gilded/"]
+	display none!important
+
+.side
+	margin 200px 16px 0 0
+	padding 6px 16px
+	background-color #fff
+	border-radius 2px
+	box-shadow 0 1px 5px rgba(0,0,0,0.16)
+	&:after
+		display block
+		margin 10px 0
+		padding 10px 0
+		color #5B92FA
+		content "CSS Theme via /r/Naut"
+		text-transform none
+		font-size 16px
+		font-family arial,sans-serif
+		position absolute
+		width 300px
+		text-align center
+		right 16px
+	.titlebox
+		.md
+			h1
+				line-height 18px
+				margin .5em 0 0!important
+			h2
+				margin 16px 0 2px
+			h3
+				a
+					padding 12px 16px
+					width 100%
+					border-radius 2px
+					background-color #516AE8
+					font-family verdana,arial,sans-serif
+					transition all .25s ease
+					color #fff
+					box-shadow 0 1px 5px rgba(0,0,0,0.24)
+					display block
+					margin 1.5em 0
+					font-size 12px
+					&:hover
+						background-color #5A72EE
+						box-shadow 0 2px 8px rgba(0,0,0,0.54)
+					&:active
+						background-color #4059DB
+						box-shadow 0 4px 12px rgba(0,0,0,0.54)
+	#moderation_tools
+		.title
+			h1
+				text-transform capitalize
+				color #4D5763
+			.collapse-button
+				color #4D5763
+				vertical-align middle
+				border-radius 1px
+				border 1px solid #d8d8d8
+	.sidecontentbox
+		.content
+			border none
+			padding 8px 0
+	.flair
+		&:before
+			margin-left 0
+
+#header-bottom-right
+	position absolute
+	top 0
+	right 0
+	width auto
+	max-width 300px
+	height 24px
+	background-color transparent
+	font-size 11px
+	color rgba(255,255,255,0.45)
+	padding 5px 8px 4px 2px
+	a
+		color #fff
+		&:hover
+			text-decoration underline
+
+.user
+	.userkarma
+		font-weight 400
+		color rgba(255,255,255,0.45)
+		border none
+		font-size 9px
+		transition all .15s ease
+
+.separator,.user
+	color rgba(255,255,255,0.45)
+
+#mail,#modmail
+	width 16px
+	height 14px
+	background-image url(%%spritesheet%%)!important
+	background-repeat no-repeat!important
+	background-color transparent
+	transition all .25s ease
+
+#mail
+	top -2px
+	overflow visible
+	&.nohavemail
+		background-position -32px -0
+	&.havemail
+		background-position -32px -16px
+		opacity 1
+		&:before
+			position fixed
+			padding 16px 24px
+			bottom 24px
+			z-index 100
+			background-color #EA4848
+			border-radius 2px
+			box-shadow 0 1px 5px rgba(0,0,0,0.24)
+			color #fff
+			width 300px
+			height 48px
+			left 24px
+			content "You have new messages!"
+			text-indent 0
+			font-size 14px
+			font-family arial,sans-serif
+			line-height 1
+			-webkit-transform translateY(112px)
+			transform translateY(112px)
+			transition background-color .25s ease,box-shadow .25s ease
+			background-image url(%%spritesheet%%)
+			background-position 269px -32px
+			background-repeat no-repeat
+		&:hover
+			&:before
+				background-color #ec5b5b
+				box-shadow 0 3px 12px rgba(0,0,0,0.48)
+				-webkit-animation-play-state paused
+				-moz-animation-play-state paused
+				-o-animation-play-state paused
+				animation-play-state paused
+		&:active
+			&:before
+				background-color #c73d3d
+				box-shadow 0 4px 14px rgba(0,0,0,0.76)
+
+.message-count
+	background-color #f50
+	position relative
+	top -1px
+
+#modmail
+	top -3px
+	&.nohavemail
+		background-position -48px -0
+	&.havemail
+		background-position -48px -16px
+		opacity 1
+
+#header-bottom-right a.pref-lang,.loggedin .logout a
+	background-position -0 -16px
+	background-image url(%%spritesheet%%)
+	width 16px
+	height 14px
+	display inline-block
+	text-indent -9999px
+	margin 0
+	position relative
+	top -1px
+	transition all .25s ease
+
+.loggedin
+	.logout
+		a
+			background-position -16px -0
+
+#search
+	position absolute
+	right 16px
+	top 96px
+	z-index 1
+	width 300px
+	input[type=text]
+		padding 10px 25px 10px 16px
+		border 0 solid
+		border-radius 2px
+		box-shadow 0 1px 5px rgba(0,0,0,0.24)!important
+		transition all .25s ease
+	input[type=text]:hover
+		box-shadow 0 3px 12px rgba(0,0,0,0.32)!important
+	input[type=text]:focus
+		border-radius 2px 2px 0 0
+		outline none
+		&:hover
+			box-shadow 0 1px 5px rgba(0,0,0,0.24)!important
+	input[type="text"]:-moz-placeholder
+		font-size 0
+		&::after
+			font-size 14px
+			content "Search reddit.."
+			position relative
+			top 1px
+	input[type="text"]::-webkit-input-placeholder
+		font-size 0
+		&::after
+			font-size 14px
+			content "Search reddit.."
+			position relative
+			top 1px
+	input[type="text"]:-ms-input-placeholder
+		font-size 0
+		&::after
+			font-size 14px
+			content "Search reddit.."
+			position relative
+			top 1px
+	input[type=text]::-webkit-input-placeholder
+		color #B3B3B3
+	input[type=text]:-moz-placeholder
+		color #B3B3B3
+	input[type=text]::-moz-placeholder
+		color #B3B3B3
+	input[type=text]:-ms-input-placeholder
+		color #B3B3B3
+	input[type=submit]
+		height 32px
+		width 32px
+		margin-left -38px
+		background-image url(%%spritesheet%%)
+		background-position -215px -231px
+		background-repeat no-repeat
+		border none!important
+		border-radius 16px
+		background-color rgba(0,0,0,0.00)
+		transition background-color .15s ease
+	input[type=submit]:hover
+		background-image url(%%spritesheet%%)
+		background-position -215px -231px
+		background-repeat no-repeat
+		background-color rgba(0,0,0,0.05)
+	#searchexpando
+		background-color #f2f2f2
+		border none
+		border-radius 0 0 2px 2px
+		margin-top -5px
+		padding-top 10px
+		padding-left 0
+		padding-right 0
+		height 57px
+		line-height 45px
+		label
+			padding 18px 8px 17px
+			cursor pointer
+			transition all .1s ease
+			&:hover
+				background-color rgba(0,0,0,0.1)
+			&:active
+				background-color rgba(0,0,0,0.25)
+		p
+			display none!important
+
+.morelink
+	position absolute
+	top 148px
+	box-shadow 0 1px 5px rgba(0,0,0,0.24)
+	background-color red-600
+	background-image url(%%spritesheet%%)!important
+	background-position 268px -214px!important
+	background-repeat no-repeat!important
+	right 16px
+	width 300px
+	height 36px
+	border-radius 2px
+	line-height 36px
+	border none
+	text-align left
+	padding 0 16px
+	transition all .25s ease
+	font-family verdana,arial,sans-serif
+	&:hover
+		background-color red-900
+		box-shadow 0 5px 8px rgba(0,0,0,0.24)
+		&:after
+			margin-top 16px
+			opacity 100
+			visibility visible
+			transition-delay .25s
+	&:active
+		background-color #4059DB
+		box-shadow 0 8px 12px rgba(0,0,0,0.60)
+	a
+		color #fff
+		font-weight 400
+		font-size 14px
+		letter-spacing 0
+	&:after
+		content "Please remember to read the rules. Thank you!"
+		padding 16px
+		width 300px
+		position absolute
+		right 0
+		margin-top 0
+		display block
+		background-color red-900
+		color #fff
+		letter-spacing 0
+		z-index 100
+		opacity 0
+		transition all .25s ease
+		transition-delay 0
+		font-weight 400
+		line-height 1.4em
+		border-radius 2px 2px 0 0
+		box-shadow 0 1px 5px rgba(0,0,0,0.16)
+		visibility hidden
+		pointer-events none
+
+.disabled
+	.morelink
+		box-shadow none!important
+		background-color #CFCFCF
+		a
+			color #4d5763
+		&:after
+			content "You must be approved by the moderators in order to submit."
+			background-color #CFCFCF
+			color #4d5763
+
+.account-activity-box,.sidebox.create,.morelink .nub,.sidebox.submit.submit-text
+	display none
+
+.login-form-side
+	border none
+	button
+		&.btn
+			margin-right -3px
+
+.login-form-side input[type=text],.login-form-side input[type=password]
+	width 128px
+
+.titlebox
+	h1
+		color #4d5763
+		margin-bottom 6px
+	.users-online
+		display inline
+		&:before
+			display none
+		.number
+			font-style italic
+			&:before
+				content ""
+			&:after
+				content " here"
+	.tagline
+		font-size 12px
+		margin 0
+		&:after
+			content ""
+			height 2px
+			background-color #f2f2f2
+			display block
+			margin-top 16px
+		a
+			&.flairselectbtn
+				color #4F8EF7
+				&:after
+					content " flair"
+		.flair
+			&:before
+				content ""
+	form
+		&.toggle
+			&.sr_style_toggle
+				padding 0
+				display block
+				label
+					position relative
+					top -3px
+	.fancy-toggle-button
+		position relative
+		.add
+			background-color #516AE8
+			background-position -208px -144px
+			&:hover
+				background-color #5A72EE
+				&:after
+					visibility visible
+					margin-top 40px
+					color #fff
+					background-color #516AE8
+					box-shadow 0 1px 5px rgba(0,0,0,0.24)
+			&:active
+				background-color #fff
+				background-position -208px -192px
+			&:after
+				content "Subscribe!"
+		.remove
+			background-color #fff
+			background-position -208px -192px
+			&:hover
+				background-color rgba(0,0,0,0.05)
+				&:after
+					visibility visible
+					color #4D5763
+					background-color #fff
+					margin-top 40px
+					box-shadow 0 1px 5px rgba(0,0,0,0.24)
+			&:active
+				background-color #5A72EE
+				background-position -208px -144px
+			&:after
+				content "Unsubscribe"
+	.bottom
+		display none
+
+.titlebox span.subscribers,.titlebox .users-online,.titlebox .number
+	color #999
+	font-size 12px
+	position relative
+	top -2px
+	left -2px
+
+div
+	&.titlebox
+		span
+			&.word
+				display none
+			&.number
+				&:after
+					content " readers,"
+	&.commentarea
+		div
+			&.RES-keyNav-activeElement
+				.md
+					background-color transparent!important
+
+.titlelebox
+	.word
+		display none
+
+.titlebox .users-online,.titlebox .number
+	cursor text
+
+.titlebox form.toggle.flairtoggle,.leavemoderator,.titlebox .tagline a.author,.sidebox .subtitle
+	display none
+
+.res
+	form
+		&.toggle
+			&.sr_style_toggle
+				margin -20px 0 18px
+	.RES-keyNav-activeElement
+		outline 0 dashed #E0E0E0!important
+		transition all .35s ease
+	.entry
+		transition all .15s ease
+	.commentarea
+		.thing
+			padding 16px 16px 0 14px !important
+			border none!important
+		.entry
+			.flat-list
+				padding-bottom 16px
+		& > .usertext
+			margin-top -74px
+			padding-top 76px
+		.panestack-title
+			margin-top 0
+			padding-top 12px
+	.thing
+		.tagline
+			.author
+				&.submitter
+					padding 1px 4px
+					border-radius 1px
+					background-color #4F8EF7!important
+					box-shadow 0 0 0 rgba(0,0,0,0)
+					transition all .15s ease
+					&:hover
+						box-shadow 0 2px 4px rgba(0,0,0,0.2)
+						background-color #4F8EF7!important
+				&.moderator
+					background-color #65B354!important
+					padding 1px 4px
+					border-radius 1px
+	&.comments-page
+		.side
+			margin-top 374px
+	.link
+		.tagline
+			a
+				&.voteWeight
+					background-color transparent!important
+	.srSep
+		color rgba(255,255,255,0.45)
+	#RESShortcutsViewport
+		margin-right 381px
+	#RESShortcutsEditContainer
+		margin-right 312px
+	#header-bottom-right
+		top 1px
+		border-radius 0
+		height 18px
+		padding 0 8px 0 0
+		.user
+			font-size 0
+			.userkarma
+				display none
+			a
+				font-size 11px
+	#userbarToggle
+		background-color transparent
+		color rgba(255,255,255,0.45)
+		border-radius 0
+		border none
+	#REScommentNavToggle
+		max-width 98px
+		overflow hidden
+		max-height 15px
+		background-color #FAFAFA
+		transition all .35s ease
+		&:hover
+			max-width 100%
+	.content
+		.RESBigEditorPop
+			background-color rgba(0,0,0,0)
+			line-height inherit
+			font-size 11px
+			font-family verdana,arial,sans-serif
+			box-shadow none
+			font-weight 400
+			color #4D5763
+			border none
+			padding 0
+			height inherit
+			margin-left 4px
+			margin-top 5px
+	.titlebox
+		.tagline
+			margin-top 6px
+			margin-top -14px
+	#progressIndicator
+		width inherit
+		border-radius 0
+		border none
+		padding 16px
+		margin 16px 0
+		color #b3b3b3
+		background-color #fff
+		height inherit
+		h2
+			color #4D5763
+	.NERPageMarker
+		border-radius 0
+		border none
+		background-color #fff
+		padding 16px 0
+		margin 0
+	.sitetable
+		.sitetable
+			margin-right 0
+	#search
+		#searchexpando
+			width 300px
+			box-shadow 0 2px 6px rgba(0,0,0,0.2)
+			height auto
+			label
+				padding-top 13px
+				padding-bottom 13px
+	#searchexpando
+		.searchexpando-submit
+			display none
+	h1
+		&.hover
+			&.redditname
+				margin-bottom 28px
+
+.titlebox .fancy-toggle-button .add,.titlebox .fancy-toggle-button .remove
+	text-indent -9999px
+	height 48px
+	width 48px
+	position absolute
+	right -268px
+	top -36px
+	background-image none
+	border-radius 32px
+	background-color #51A3E8
+	border 0 solid
+	box-shadow 0 2px 4px rgba(0,0,0,0.24)
+	background-image url(%%spritesheet%%)
+	transition all .25s ease,background-position .25s ease,background-color .5s ease
+	outline none!important
+
+.titlebox .fancy-toggle-button .add:hover,.titlebox .fancy-toggle-button .remove:hover
+	box-shadow 0 3px 6px rgba(0,0,0,0.48)
+
+.titlebox .fancy-toggle-button .add:active,.titlebox .fancy-toggle-button .remove:active
+	box-shadow 0 4px 16px rgba(0,0,0,0.64)
+
+.titlebox .fancy-toggle-button .add:after,.fancy-toggle-button .remove:after
+	display block
+	visibility hidden
+	position absolute
+	z-index 1000
+	right -26px
+	margin-top 16px
+	padding 12px
+	background-color rgba(79,77,192,0)
+	border none
+	border-radius 2px
+	color rgba(255,255,255,0)
+	text-align center
+	letter-spacing 1px
+	font-weight 400
+	font-size 13px
+	transition all .25s ease
+	pointer-events none
+	text-indent 0
+	box-shadow 0 0 0 rgba(0,0,0,0.00)
+
+.hover-bubble
+	&.multi-selector
+		margin-top -60px
+
+.side .md .-blocks,.side .md .-lists,.side .md pre,.side .md blockquote,.side .md table,.side .md p,.side .md ul,.side .md ol
+	color #4D5763
+	font-size 13px
+	font-family Arial,sans-serif
+	line-height 1.3333333333333em
+
+.side .titlebox .md h4 a,.wiki-page .wiki-page-content .md.wiki h4
+	padding 12px 16px
+	background-color #FFF
+	border 1px solid #D4D4D4
+	border-radius 2px
+	box-shadow 0 2px 5px rgba(0,0,0,0.12)
+	color #737373
+	font-weight 700
+	transition all .15s ease
+	display block
+	margin 1.5em 0
+	font-size 12px
+
+.side .titlebox h4 a:hover,.wiki-page .wiki-page-content .md.wiki h4:hover
+	box-shadow 0 3px 8px rgba(0,0,0,0.24)
+	color #4D5763
+
+.side .titlebox h4 a:active,.wiki-page .wiki-page-content .md.wiki h4:active
+	box-shadow inset 0 2px 0 #D6D6D6
+	background-color #E5E5E5
+	color #999
+	box-shadow 0 6px 12px rgba(0,0,0,0.36)
+
+.md
+	hr
+		border solid 1px #e5e5e5
+	a
+		color #4F8EF7
+		&:visited
+			color #7D5D8A
+	pre
+		padding 8px
+	blockquote
+		border-left 2px solid #E5E3DA
+		color #706F6F
+	h3
+		color #4D5763
+		margin 16px 0 0
+
+.icon-menu
+	a
+		background-color transparent
+
+#ad_sponsorship,#ad-frame,#ad_main
+	margin-left -16px
+
+#ad_sponsorship
+	margin-top -18px
+	border-radius 2px 2px 0 0
+
+.gadget
+	.midcol
+		width 38px
+
+@media only screen and (min-width:1921px)
+	body
+	&::before
+		background-size cover
+
+.sitetable
+	position relative
+
+.link
+	margin 0
+	padding 0
+	background-color #fff
+	.midcol
+		width 36px!important
+		margin 15px 14px 0 11px
+		overflow visible
+		height 60px
+	.score
+		line-height 16px
+		font-size 12px
+		margin 1px 0
+		&.likes
+			color #ff6422
+		&.dislikes
+			color #5c5bd7
+	.title
+		margin -2px 0 0
+		font-size 18px
+		font-family Arial,sans-serif
+		overflow visible
+		transition all .15s ease
+		line-height 1.33
+	.entry
+		padding 15px 32px 14px 0
+		border-bottom 1px solid #f2f2f2
+		margin-left 0
+		.tagline
+			a
+				color #4d5763
+				&:hover
+					color #4F8EF7
+					text-decoration none
+				&.author
+					margin-right inherit
+			&:first-letter
+				text-transform capitalize
+			time
+				cursor help
+			.userattrs
+				visibility hidden
+				a
+					visibility visible
+					font-size 10px
+					padding 1px 3px 1px 2px
+					margin-left 2px
+					background-color red
+					color #fff!important
+					vertical-align middle
+					border-radius 1px
+					position relative
+					top -1px
+					cursor help
+					&.moderator
+						background-color #65B354
+		.buttons
+			li
+				a
+					&:hover
+						color #4F8EF7
+						text-decoration none
+					&.comments
+						color #4F8EF7
+						font-weight 700!important
+						opacity 100!important
+						transition all .25s ease-in-out!important
+					&.flairselectbtn
+						color #4F8EF7
+				.redditSingleClick
+					padding 0 1px
+					color #b3b3b3
+					font-weight 400
+					font-size 13px
+					font-family Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif
+					transition all .15s ease
+		li
+			.comments
+				&:hover
+					text-decoration none
+	.domain
+		visibility hidden
+		a
+			visibility visible
+			position relative
+			top -1px
+			color #b3b3b3
+			transition all .15s ease
+			&:hover
+				color #4F8EF7
+				text-decoration none
+	.usertext
+		.md
+			margin-top 10px
+			padding-top 3px
+			padding-left 0
+			background-color transparent
+			border 0 solid
+			border-top 1px solid #F7F7F7
+			border-radius 0
+			color #4D5763
+	.flat-list
+		margin-top 3px
+	&.last-clicked
+		background-color #F2F2F2
+		border none
+	&.promotedlink
+		&.promoted
+			margin-right 0
+			background-color #EFF7FF
+			border none
+			padding 0
+			.thumbnail
+				max-height inherit
+				max-width inherit
+				margin-top 8px
+				img
+					height inherit
+					width inherit
+	&.compressed
+		margin 0
+		.entry
+			padding 11px 32px 9px 0
+		.title
+			margin 0
+	.flair
+		font-size 12px
+
+body >.content .link .rank,.rank-spacer
+	display none
+
+.arrow
+	margin 0 0 0 2px
+	background-image url(%%spritesheet%%)!important
+	background-color transparent
+	width 33px
+	border-radius 2px
+	transition background-color .25s ease
+	&:hover
+		background-color rgba(0,0,0,0.05)
+	&.up
+		height 20px
+		background-position -64px 0
+		transition background-color .25s ease
+	&.upmod
+		height 20px
+		background-position -128px 0
+		position relative
+		&:focus
+			&:after
+				position absolute
+				left 2px
+				bottom -3px
+				width 28px
+				height 28px
+				opacity 1
+				z-index 100
+				content " "
+				background-color #f50
+				border-radius 28px
+				animation upvote .35s ease-out forwards
+				-webkit-animation upvote .35s ease-out forwards
+	&.down
+		height 20px
+		background-position -160px 0
+		transition background-color .25s ease
+		&:after
+			display block
+			visibility hidden
+			position absolute
+			z-index 1000
+			margin-top -6px
+			margin-left 32px
+			padding 12px
+			background-color rgba(79,77,192,0.0)
+			border none
+			border-radius 2px
+			color rgba(255,255,255,0)
+			content "For content that does not contribute to any discussion."
+			text-align center
+			letter-spacing 1px
+			font-weight 400
+			font-size 13px
+			transition all .25s ease
+			pointer-events none
+		&:hover
+			&:after
+				visibility visible
+				background-color rgba(79,77,192,0.9)
+				color #FFF
+				margin-left 48px
+	&.downmod
+		height 20px
+		background-position -224px 0
+
+.thumbnail
+	max-width 64px
+	max-height 56px
+	margin 16px 16px 0 0
+	&.self
+		background url(%%spritesheet%%) -73px -80px
+	&.default
+		background url(%%spritesheet%%) -143px -80px
+	&.nsfw
+		background url(%%spritesheet%%) -3px -140px
+
+.thumbnail.self,.thumbnail.default
+	height 56px
+
+.linkflairlabel
+	padding 1px 6px
+	height 18px
+	border-radius 1px
+	border 0 solid
+	color #fff
+	font-weight 700
+	font-style normal
+	font-variant normal
+	font-size 13px
+	font-family Arial,sans-serif
+	cursor default
+	vertical-align middle
+	position relative
+	top -2px
+	background-color #4F8EF7
+
+.linkflair-inspiration
+	.linkflairlabel
+		background-color #ea4848
+		color #fff
+	.thumbnail
+		&.self
+			background url(%%spritesheet%%) -143px -140px
+
+.linkflair-waywo
+	.linkflairlabel
+		background-color #516ae8
+		color #fff
+	.thumbnail
+		&.self
+			background url(%%spritesheet%%) -73px -140px
+
+.linkflair-mod
+	.linkflairlabel
+		background-color #65B354
+		color #fff
+	a
+		color #65B354!important
+
+.linkflair-mod .thumbnail.default,.linkflair-mod .thumbnail.self
+	background url(%%spritesheet%%) -3px -80px!important
+
+.thing .title.loggedin.click,.thing .title.click,.thing .title.loggedin,.thing .title
+	color #4F8EF7
+
+.content .thing .title:visited,.content .thing.visited .title
+	color #7D5D8A
+
+.thing .title.loggedin.click:visited,.thing .title.click:visited
+	color #4F8EF7
+
+.approval-checkmark
+	cursor default
+
+.expando-button,.expando-button.image,.expando-button.video-muted
+	position relative
+	margin 2px 6px 2px 0 !important
+	width 16px!important
+	height 16px!important
+	border-radius 2px
+	background-color transparent
+	background-image url(%%spritesheet%%)!important
+	border 1px solid #e9e9e9
+	cursor pointer
+
+.expando-button
+	&:hover
+		background-color #4F8EF7
+		border-color #4F8EF7
+	&.selftext
+		&.collapsed
+			background-position -32px -32px!important
+			&:hover
+				background-position -48px -32px!important
+		&.expanded
+			background-position -64px -32px!important
+			&:hover
+				background-position -80px -32px!important
+	&.video
+		&.collapsed
+			background-position -96px -32px!important
+			&:hover
+				background-position -12px -32px!important
+		&.expanded
+			background-position -64px -32px!important
+			&:hover
+				background-position -80px -32px!important
+	&.image
+		&.collapsedExpando
+			background-position -160px -32px!important
+			&:hover
+				background-position -176px -32px!important
+		&.expanded
+			background-position -64px -32px!important
+			&:hover
+				background-position -80px -32px!important
+		&.gallery
+			&.collapsedExpando
+				background-position -128px -32px!important
+				&:hover
+					background-position -144px -32px!important
+			&.expanded
+				background-position -64px -32px!important
+				&:hover
+					background-position -80px -32px!important
+	&.video-muted
+		&.collapsed
+			background-position -208px -32px!important
+			&:hover
+				background-position -224px -32px!important
+		&.expanded
+			background-position -64px -32px!important
+			&:hover
+				background-position -80px -32px!important
+
+.entry
+	.tagline
+		margin-top 4px
+		color #b3b3b3
+		font-size 12px
+		font-family arial,sans-serif
+		transition all .15s ease
+	.buttons
+		li
+			a
+				padding 0 1px
+				color #b3b3b3
+				font-weight 400
+				font-size 13px
+				font-family Arial,sans-serif
+				transition all .15s ease
+			&.reported-stamp
+				background-color transparent
+				border 1px solid #EDEEEE!important
+				border-radius 20px
+				color #4A4F57
+				line-height 16px
+
+.RESUserTagImage
+	height 10px!important
+	background-image url(%%spritesheet%%)!important
+	background-position -192px -34px!important
+	opacity .25!important
+	margin-left 2px!important
+	transition opacity .15s ease
+	margin-top 1px!important
+	&:hover
+		opacity 1!important
+
+.nsfw-stamp
+	acronym
+		padding 2px 3px
+		background-color transparent
+		border-color #e82e63!important
+		border-radius 2px
+		color #e82e63
+		opacity 100
+		cursor help
+
+.action-form
+	position fixed
+	top 35%
+	left 40%
+	margin 0
+	padding 24px
+	background-color #fff
+	z-index 100
+	box-shadow 0 0 16px rgba(0,0,0,0.24)
+	border none
+	border-radius 2px
+	.reason-prompt
+		font-size 16px
+		color #4D5763
+		padding-bottom 8px
+		display block
+		&:first-letter
+			text-transform capitalize
+		li
+			padding 4px 4px 4px 0
+			display block
+	li
+		label
+			padding 4px 4px 4px 0
+			cursor pointer
+			display block
+			color #4D5763
+			text-transform capitalize
+			&:hover
+				background-color rgba(0,0,0,0.05)
+	input[name="other_reason"]
+		padding 8px
+
+.thing
+	&.spam
+		background-color #FFE9E6
+	&.stickied
+		border-radius 2px 2px 0 0
+		.expando-button
+			&:hover
+				background-color #65b354!important
+				border-color #65b354!important
+		.domain
+			display none
+
+a.pretty-button.negative,a.pretty-button.neutral,a.pretty-button.positive
+	background-image none
+	border 1px solid
+	border-radius 20px
+	box-shadow inset 0 0 0 rgba(0,0,0,0.25)
+	color #fff
+	line-height 15px
+	transition all .25s ease
+
+a.pretty-button.positive.pressed,a.pretty-button.neutral.pressed,a.pretty-button.negative.pressed
+	background-image none
+	box-shadow inset 0 3px 1px rgba(0,0,0,0.15)
+
+.comment.spam>.child,.message.spam>.child
+	background-color transparent
+
+.thing.stickied a.title,.thing.stickied a,.thing.stickied .entry li .comments
+	color #65b354!important
+
+.tagline
+	.stickied-tagline
+		color #b3b3b3
+		cursor help
+	.submitter
+		font-weight 700
+		color #4f8ef7
 
 .content
-	margin 25px 332px 0px 16px
-	padding 0px
+	.spacer
+		margin 0
+	.infobar
+		margin 0 0 16px
+		padding 8px 16px
+		line-height 26px
+		border none
+		background-color #516AE8
+		color #fff
+		box-shadow 0 1px 5px rgba(0,0,0,0.24)
+		border-radius 2px
+		&:first-letter
+			text-transform capitalize
+		&.welcome
+			line-height inherit
+			height 86px
+			h1
+				color #4d5763
+	&.submit
+		.info-notice
+			background-color #fff
+			border-radius 2px
+			padding 16px
+			box-shadow 0 1px 5px rgba(0,0,0,0.16)
+			border none
+			margin-bottom 0
+
+.organic-listing .link,.organic-listing .link.compressed,.organic-listing .link.promotedlink
+	padding-top 0
+	padding-bottom 0
+
+.organic-listing
+	background-color #fff!important
+	padding 0
+	position relative
+	margin-bottom 0
+	border none
+	border-radius 2px 2px 0 0
+	.help
+		margin-bottom 20px
+		margin-right 16px
+	.sponsored-tagline
+		margin-bottom 20px
+		margin-right 16px
+		color #B3B3B3
+
+.flairselector
+	position fixed
+	top 20%!important
+	left 50%!important
+	margin-left -125px
+	padding 32px!important
+	width 250px!important
+	border none
 	border-radius 2px
+	box-shadow 0 0 16px rgba(0,0,0,0.64)
+	&.drop-choices
+		&.active
+			border 1px solid #e2e2e2
+	h2
+		margin-bottom 4px
+		background-color transparent
+		color #4F8EF7
+		text-align left
+		text-transform capitalize
+		font-weight 400
+		font-size 18px
+	.flairoptionpane
+		ul
+			li
+				padding 0!important
+				margin 4px 0
+				&.flairsample-right
+					padding 5px 0!important
+					border none
+	form
+		padding-top 12px
+		border-top 1px solid #F7F7F7
+		.flairselection
+			text-align left
+			&:before
+				display block
+				content "Selected Flair:"
+				color #b3b3b3
+			.linkflair
+				a
+					&.title
+						font-size 18px!important
+						opacity 100!important
+						color #4F8EF7!important
+						cursor default
+			.flairremove
+				padding 4px 0
+				margin-bottom 8px
+				visibility hidden
+				display block!important
+				a
+					visibility visible
+					opacity 100!important
+					color #4F8EF7!important
+					margin-left -4px
+					text-transform capitalize
+					&:first-letter
+						text-transform capitalize
+					&:hover
+						text-decoration underline!important
+	.error
+		text-align left
+		&:first-letter
+			text-transform capitalize
+		&:after
+			display block
+			color #b3b3b3
+			content "Go to /r/.../about/flairs."
+	img
+		position relative
+		left 50%
+		margin-left -9px
+		opacity .5
+	li
+		&.selected
+			border none
+			background-color transparent
+
+.flairoptionpane
+	max-height 250px
+	text-align left
+	ul
+		li
+			.linkflair
+				text-align left
+				padding 0
+				span
+					&.linkflairlabel
+						margin 8px 0
+						line-height 1.35
+						margin-right 6px
+				a
+					&.title
+						font-size 18px!important
+						opacity 100!important
+						color #4F8EF7!important
+
+.flairoptionpane ul li .linkflair:hover,.flairselector li:hover
+	background-color #F5F8F9
+	border 0 solid
+
+.flairselector li a,.flairselector form .flairselection a.author
+	color #b3b3b3!important
+	font-size 11px
+
+.unvotable-message
+	border 0 solid
+	color #b3b3b3
+	&:first-letter
+		text-transform capitalize
+
+div.RES-keyNav-activeElement,div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed
+	background-color transparent!important
+	padding-left 8px!important
+	border-left 2px solid #4F8EF7
+
+.userTagLink.hasTag,#userTaggerPreview
+	font-size 11px!important
+	border-radius 0!important
+	border 0 solid!important
+	margin-top 0!important
+	margin-left 4px!important
+
+.RESDialogSmall
+	border none
+	box-shadow 0 2px 3px rgba(0,0,0,0.12)
+	margin-top 8px
+	& > h3
+		color #4F8EF7
+		background-color #FFF
+		border-bottom 1px solid #EDEDED
+		height 36px
+		padding 8px
+		margin 0
+
+.livePreview
+	.md
+		padding 8px 12px
+
+.RESCloseButton
+	line-height 19px
+	height 22px
+	width 22px
+	transition all .15s ease
+	&:hover
+		border 1px solid #D7D9DC
+
+#userTaggerToolTip input[type=text],#userTaggerToolTip select
+	line-height 22px
+	padding-left 4px
+	border 1px solid #E5E5E5!important
+
+.toggleButton
+	line-height .8
+	.toggleOn
+		border-radius 0
+		border 1px solid #4F8EF7
+		background-color #4F8EF7
+		color #fff
+		text-transform capitalize
+	.toggleOff
+		border-radius 0
+		border 1px solid #D7D9DC
+		background-color transparent
+		text-transform capitalize
+
+#userTaggerToolTip
+	input[type=submit]
+		bottom 10px!important
+
+.top-page
+	.content
+		.menuarea
+			border-bottom 0
+			padding 0
+			margin 0
+			height 36px
+			.drop-choices
+				&.lightdrop
+					display inline
+					visibility visible
+					padding 10px 16px 10px 104px
+					margin-left 16px
+					margin-top 1px
+					border-radius 2px 2px 0 0
+					border none
+					border-bottom 1px solid #E0E1E2
+					width calc(100% - 348px)
+					box-shadow none
+					a
+						&.choice
+							padding 10px
+							color #4D5763
+							transition all .25s ease
+							&:hover
+								background-color #F5F8F9
+							&.selected
+								background-color #4f8ef7
+								color #fff
+						&.choice[href*="/?t=all"]
+							border-right 0 solid
+			.dropdown-title
+				&.lightdrop
+					visibility hidden
+			.dropdown
+				&.lightdrop
+					.selected
+						z-index 1002
+						position relative
+						left -68px
+						top 11px
+						background none
+						text-decoration none
+						text-transform capitalize
+						font-size 12px
+						pointer-events none
+						padding 10px 16px
+						background-color #5A72EE
+						overflow visible
+						color #FFF
+	.menuarea
+		.spacer
+			overflow visible
+
+.top-page .content .menuarea .drop-choices.lightdrop a.choice,.top-page .content .menuarea .drop-choices.lightdrop form
+	display inline
+
+.guider
+	border none
+	box-shadow 0 2px 3px #DDD
+
+.guider_content
+	h1
+		color #4F8EF7
+
+.guider_button
+	font-size 11px
+	border none
+	background-image none
+	background-color #4F8EF7
+	transition all .15s ease
+	&:hover
+		background-color rgba(79,142,247,0.75)
+
+.x_button
+	transition all .25s ease
+	box-shadow 0 1px 4px rgba(0,0,0,0.00)
+	&:hover
+		box-shadow 0 1px 4px rgba(0,0,0,0.15)
+
+.infobar
+	.md
+		color #fff
+
+.commentarea
+	.infobar
+		padding 8px 16px
+		line-height 16px
+		margin-right 0
+		a
+			color rgba(0,0,0,0.54)
+			font-weight 700
+	.panestack-title
+		margin 10px 0 0 22px
+		border-bottom 0
+		.title
+			color #4D5763
+	.menuarea
+		margin 0 0 0 22px
+		span
+			&.dropdown-title
+				&.lightdrop
+					color #b3b3b3
+					&:first-letter
+						text-transform capitalize
+		.dropdown
+			&.lightdrop
+				.selected
+					cursor pointer
+					text-decoration none
+					background-image none
+					padding-right 0
+					font-weight 400
+					color #b3b3b3
+					&:hover
+						color #4F8EF7
+					&:after
+						content "▼"
+	& > .usertext
+		background-color #FAFAFA
+		border-radius 0 0 2px 2px
+		margin -58px 0 16px
+		padding 64px 16px 16px
+		box-shadow 0 1px 5px rgba(0,0,0,0.16)
+		overflow visible
+	.sitetable
+		margin 0
+		box-shadow none
+		.comment
+			background-color #fff
+	.thing
+		border-radius 2px
+		background-color #fff
+		box-shadow 0 1px 5px rgba(0,0,0,0.16)
+		margin 0 0 8px
+		padding 16px 16px 16px 14px
+	.child
+		.thing
+			box-shadow none
+			padding 4px
+			margin 12px 0 0
+	.comment
+		.midcol
+			margin-top 2px
+			width 36px
+			margin-right 2px
+			overflow visible
+
+#noresults
+	margin 0
+	position absolute
+	top 72px
+	width 100%
+	height 312px
+	background transparent url(%%noresults%%) no-repeat 50% 50%
+	text-indent -9999px
+	font-size 0
+	display block
+
+.sitetable
+	.nav-buttons
+		padding 16px
+		background-color #fff
+		color #b3b3b3
+		border-top 1px solid #F2F2F2
+		margin-top -1px
+		&:first-letter
+			text-transform capitalize
+		.nextprev
+			color #b3b3b3
+			font-size 14px
+			a
+				border 0
+				background-color transparent
+				&:hover
+					text-decoration underline
+					border 0
+					background-color transparent
+
+.comments-page
+	.link
+		border-radius 2px 2px 0 0
+		box-shadow 0 1px 5px rgba(0,0,0,0.16)
+		.entry
+			border-bottom none
+			padding-bottom 15px
+	.side
+		margin-top 312px
+		.linkinfo
+			position absolute
+			right 16px
+			top 200px
+			padding 16px
+			width 300px
+			background-color #fff
+			border-radius 2px
+			box-shadow 0 1px 5px rgba(0,0,0,0.16)
+			border none
+			.date
+				color #B3B3B3
+				&:first-letter
+					text-transform capitalize
+			.score
+				color #4D5763
+
+.panestack-title
+	.title
+		&:first-letter
+			text-transform capitalize
+
+.drop-choices
+	&.lightdrop
+		border none
+		z-index 1001
+		box-shadow 0 1px 3px rgba(0,0,0,0.2)
+	a
+		&.choice
+			padding 6px
+			transition all .1s ease
+			&:hover
+				background-color #4F8EF7
+				color #fff
+
+.commentarea .menuarea .toggle a,.help-hoverable
+	color #b3b3b3
+	font-weight 400
+
+.commentarea .menuarea .toggle a:hover,.help-hoverable:hover
+	color #4F8EF7
+
+.usertext
+	button
+		margin 4px 16px 8px 0
+	.bottom-area
+		width 500px
+		a
+			color #b3b3b3
+			&.reddiquette
+				color #4F8EF7
+			&:hover
+				color #4f8ef7
+	&.grayed
+		.usertext-body
+			margin 4px 0
+			background-color transparent
+			text-transform italic
+			padding 0
+
+.usertext-edit
+	textarea
+		position relative
+		z-index 999
+
+.gold-accent
+	&.comment-visits-box
+		margin 0 0 12px
+		border-radius 2px
+
+.comment .child,.comment .showreplies
+	border-left 1px dotted #ECECEC
+	margin-top 0
+
+.comment
+	.midcol
+		width 24px
+		margin-right 0
+		.arrow
+			margin-left 0
+			margin-bottom 4px
+	.entry
+		.tagline
+			color #b3b3b3
+			font-size 12px
+			font-family Arial,sans-serif
+	.expand
+		background-color transparent
+		transition all .15s ease
+		color #B3B3B3
+		&:hover
+			color #fff
+			text-decoration none
+			background-color #4F8EF7
+	.author
+		color #4D5763
+		margin-right 0
+		font-weight 700
+		&:hover
+			color #4f8ef7
+			text-decoration none
+	.score
+		font-size inherit
+		font-weight 700
+		color #666
+	span
+		&.userattrs
+			margin-left 4px
+	.usertext
+		.md
+			color #4D5763
+			p
+				margin-top 0
+	.flat-list
+		li
+			a
+				color #b3b3b3
+				font-weight 400
+				font-size 10px
+				&:hover
+					color #4F8EF7
+					text-decoration none
+			a[onclick*="reply"]
+				color #4F8EF7
+				font-weight 700
+				font-size 11px
+
+.tagline .moderator,.green
+	color #65B354
+	font-weight 700
+
+.md h1,.md h2
+	margin .5em 0 .25em
+	border none
+	color #4D5763
+
+.deepthread
+	a
+		color #4F8EF7
+
+.linkinfo
+	.shortlink
+		input
+			border 1px solid #E5E5E5
+
+.submit-page
+	.content
+		margin 96px auto
+	#newlink
+		&.submit
+			&.content
+				width 524px
+				margin 0 auto
+				form
+					.spacer
+						& + .spacer
+							margin 0
+				ul
+					&.tabmenu
+						&.formtab
+							padding 0
+							border none
+				.tabmenu
+					&.formtab
+						a
+							padding 16px
+							width 262px
+							display inline-block
+							text-align center
+							background-color #fff
+							color #4D5763
+							text-transform uppercase
+							font-weight 700
+							transition all .25s ease
+							font-size 16px
+							border none
+							&:hover
+								background-color #e7e9f6
+						.selected
+							a
+								font-size 16px
+								background-color #516AE8
+								color #fff
+								&:hover
+									background-color #6379ea
+				.btn
+					width 100%
+					line-height 41px
+					height 42px
+					margin-top 24px
+					background-color #516AE8
+					border none
+					color #fff
+					box-shadow 0 1px 5px rgba(0,0,0,0.24)
+					cursor pointer
+					&:hover
+						box-shadow 0 2px 12px rgba(0,0,0,0.48)
+						color #fff
+	.formtabs-content
+		border-top 0
+		padding-top 0
+	.roundfield
+		padding 16px
+		width 524px
+		background-color #fff
+		border-radius 2px
+		margin-bottom 16px
+		box-shadow 0 1px 5px rgba(0,0,0,0.16)
+		.title
+			color #4D5763
+			text-transform capitalize
+	.infobar
+		width 524px
+		margin 0
+		padding 16px
+		color #fff
+		background-color #516AE8
+		border-radius 0 0 2px 2px
+		border none
+		margin-top -12px
+		box-shadow 0 1px 5px rgba(0,0,0,0.24)
+		font-size 0
+		&:before
+			font-size 14px
+			content "Please submit insightful content that allows for discussion!"
+			display inline-block
+	#header-bottom-left
+		top 36px
+		left 16px
+
+.submit-page .side,.submit-page .content h1,#suggested-reddits
+	display none
+
+.search-page
+	.searchpane
+		margin 0
+		background #fff none
+		padding 16px
+		border none
+		border-radius 2px 2px 0 0
+		box-shadow 0 1px 5px rgba(0,0,0,0.24)
+		position relative
+	#search
+		position inherit
+		input[type=text]
+			box-shadow none!important
+			font-size 36px
+			padding 0
+			margin 0
+			border-radius 0
+			border-bottom 1px solid #E7E7E7
+			margin-bottom 9px
+		input[type=text]:hover
+			box-shadow none!important
+		label
+			padding 1em
+			margin .5em 0
+			transition background-color .1s ease
+			cursor pointer
+			font-size 12px
+			&:hover
+				background-color rgba(0,0,0,0.05)
+	#previoussearch
+		p
+			margin-top 1.5em
+	.morelink
+		top 96px
+	.side
+		margin-top 148px
+	.searchfacets
+		box-shadow 0 1px 5px rgba(0,0,0,0.24)
+		border none
+		padding 16px
+		margin 0
+		background-color #F9F9F9
+		border-radius 0 0 2px 2px
+	.menuarea
+		border-radius 2px 2px 0 0
+		border-bottom 0
+		margin 16px 0 0
+		padding 16px
+		color #B3B3B3
+		background-color #fff
+		box-shadow 0 1px 5px rgba(0,0,0,0.16)
+		.dropdown
+			&.lightdrop
+				.selected
+					text-decoration none
+					color #4D5763
+					font-weight 400
+					cursor pointer
+
+.raisedbox
+	h4
+		color #B3B3B3!important
+		font-weight 400
+		text-transform capitalize
+
+.search-summary
+	display none
+
+.searchfacets
+	.title
+		margin 0
+	h4
+		&.title
+			color #4D5763
+			margin 0 0 8px
+			&:first-letter
+				text-transform capitalize
+	.list
+		margin 0
+	.facet
+		&.count
+			color #B3B3B3
+			font-weight 400
+			&:hover
+				text-decoration none
+
+.wiki-page
+	.wikititle
+		background-color #fff
+		padding 9px 16px 10px
+		border-radius 2px
+		box-shadow 0 1px 5px rgba(0,0,0,0.16)
+		font-size 16px
+		font-family arial,sans-serif
+		text-transform capitalize
+		margin 0
+	.pageactions
+		background-color #fff
+		margin-left 16px
+		border-radius 2px
+		padding 0 16px
+		border none
+		box-shadow 0 1px 5px rgba(0,0,0,0.16)
+		.wikiaction
+			margin 0
+			background-color transparent
+			border-radius 0
+			padding 10px 16px 11px
+			color #B3B3B3
+		.wikiaction-current
+			padding 10px 16px 7px
+			border-bottom 4px solid #4F8EF7
+			color #4F8EF7
+	.wiki-page-content
+		margin 16px 0
+		background-color #fff
+		padding 16px
+		border-radius 2px
+		box-shadow 0 1px 5px rgba(0,0,0,0.16)
+		.wiki
+			& > .toc
+				& > ul
+					border none
+			&.md
+				color #4D5763
+				h2
+					color #4D5763
+				p
+					font-size 14px
+					line-height 1.4285714285714em
+		hr
+			border-style solid
+			border-color #e5e5e5
+		em
+			color #B3B3B3
+
+.wiki-page .pageactions .wikiaction:hover,.wiki-page .pageactions .wikiaction-current:hover
+	background-color rgba(0,0,0,0.05)
+
+.linefield
+	background-color #fff
+	color #B3B3B3
+	border-radius 2px
+	box-shadow 0 1px 5px rgba(0,0,0,0.16)
+	margin 0 0 8px
+	width 531px
+	.title
+		color #4F8EF7
+		text-transform capitalize
+
+.linefield .title:first-letter,.linefield label:first-letter
+	text-transform capitalize
+
+.pretty-form
+	padding-top 24px
+
+.fancy-settings h1,.create-promotion h1
+	color rgba(255,255,255,.8)
+
+.fancy-settings
+	h1
+		strong
+			color rgba(255,255,255,1)
+	.pretty-form
+		padding-top 0
+
+.tabmenu
+	border-bottom 1px solid #edeeee
+	margin-bottom 12px
+	li
+		margin 0!important
+		a
+			background-color transparent
+			color #4D5763
+			border none
+			font-size 14px
+		&.selected
+			a
+				color #4F8EF7
+				background-color transparent
+				border none
+
+.tabpane-content
+	border none
+	.flairrow
+		a
+			&.author
+				color #b3b3b3
+	.tagline
+		a
+			color #4F8EF7
+	.thing
+		.title
+			overflow visible
+
+.stylesheet-customize-container
+	.pretty-form
+		background-color #fff
+		padding 16px
+		border-radius 2px
+		box-shadow 0 1px 5px rgba(0,0,0,0.16)
+		margin-bottom 16px
+		.sheets
+			margin-right 0
+	h2
+		display none
+
+.sheets
+	.btn
+		&.right
+			background-color transparent
+			border none
+			box-shadow none
+			padding 0
+
+#images
+	padding 16px
+	background-color #fff
+	border-radius 2px
+	box-shadow 0 1px 5px rgba(0,0,0,0.16)
+	height 560px
+	#image-upload
+		margin 0 0 4em
+
+.flair
+	border none
+	border-radius 0
+	font-size 12px
+	font-family arial,sans-serif
+	font-weight 400
+	background-color transparent
+	color #B3B3B3
+	padding-left 0
+	margin-right inherit
+	&:before
+		margin-right 3px
+		height auto
+		content "- "
+		margin-left 4px
+
+.listing-page
+	.comment
+		background-color #fff
+		margin-left 0
+		border-bottom 1px solid #F2F2F2
+		padding 12px
+		.midcol
+			width 36px
+			margin-right 2px
+			margin-top 4px
+			overflow visible
+		.parent
+			margin-bottom 4px
+		.title
+			font-size 14px
+			margin-left 8px
+
+.footer
+	border 0 solid
+
+.res #RESShortcutsEditContainer,#RESShortcutsSort,#RESShortcutsRight,#RESShortcutsLeft,#RESShortcutsAdd,#RESShortcutsTrash
+	background-color transparent!important
+	color rgba(255,255,255,0.45)!important
+	top 1px!important
+
+.pinHeader-sub #sr-header-area,.pinHeader-subanduser #sr-header-area
+	background-image url(%%headerimg%%)
+	background-position 50% 0
+
+.pinHeader-sub #header-bottom-left,.pinHeader-subanduser #header-bottom-left
+	margin-top 0
+
+.pinHeader-header
+	&:before
+		display none!important
+	.content
+		margin-top 12px!important
+	.side
+		margin-top 164px
+	&.res
+		&.comments-page
+			.side
+				margin-top 290px
+	#header
+		top 0
+		background-image url(%%headerimg%%)
+		height 84px
+		box-shadow 0 1px 5px rgba(0,0,0,0.24)
+
+.res #sr-header-area a.RESShortcutsCurrentSub,.res #RESSubredditGroupDropdown .RESShortcutsCurrentSub a
+	color #fff!important
+	border-bottom 2px solid #fff
+
+#RESAccountSwitcherIcon
+	position relative
+	top -4px
+
+html
+	&.res-commentBoxes
+		.comment
+			margin-left 0!important
+			margin-right 0!important
+
+.res .titlebox span.subscribers,.res .titlebox .users-online,.res .titlebox .number
+	top 0
+	left 0
+	top -32px
+
+.res .RESshortcutside,.res .RESDashboardToggle
+	background-image none!important
+	border none
+	color #4D5763
+	text-transform uppercase
+	text-decoration none
+	border-radius 0
+	padding 4px 6px 4px 0
+	margin 2px 6px 2px -4px
+	text-align left
+	width auto
+
+.res .RESshortcutside:hover,.res .RESDashboardToggle:hover
+	background-color transparent
+	color #4F8EF7
+
+.res .titlebox .fancy-toggle-button .add,.res .fancy-toggle-button .remove
+	top -78px
+
+.gearIcon
+	background url(%%spritesheet%%) -0 -0!important
+	position relative
+	top 2px
+	transition all .25s ease
+
+#RESMainGearOverlay
+	background-color #516ae8
+	top 0!important
+	height 26px!important
+	border-radius 0!important
+
+.RESDropdownList
+	border-color #4258ca
+	box-shadow 0 1px 5px rgba(0,0,0,0.24)
+	margin-top 4px
+	margin-right 8px
+	li
+		background-color #516ae8
+		color #fff
+		border-color #4258ca
+		transition all .15s ease
+		&:first-letter
+			text-transform capitalize
+
+.RESDropdownList a,.RESDropdownList a:visited
+	color #fff
+
+.RESDropdownList li:hover,.RESDropdownList li a:hover
+	color #fff
+	background-color #667df0
+
+#RESSearchMenuItem
+	border 1px solid #4258ca
+	border-radius 1px
+	background-color #667df0
+	&:hover
+		background-color #667df0
+
+.toggleButton .toggleOn,.toggleButton .toggleOff
+	text-transform lowercase
+
+.moduleToggle:not(.enabled) .toggleOn,.toggleButton:not(.enabled) .toggleOn,.moduleToggle.enabled .toggleOff,.toggleButton.enabled .toggleOff
+	background-color transparent
+	color rgba(255,255,255,0.6)
+	border 1px solid #4258ca
+	transition all .15s ease
+	border-radius 2px
+
+.moduleToggle.enabled .toggleOn,.toggleButton.enabled .toggleOn,.moduleToggle:not(.enabled) .toggleOff,.toggleButton:not(.enabled) .toggleOff
+	background-color #fff
+	color #516AE8
+	font-weight bolder
+	border 1px solid #fff
+	transition all .15s ease
+	border-radius 2px
+
+.markdownEditor
+	.edit-btn
+		&:not(.btn-macro)
+			border 0 solid!important
+			border-radius 1px
+			box-shadow 0 1px 2px rgba(0,0,0,0.12)
