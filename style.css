@@ -35,7 +35,7 @@ body.listing-page > .content {
   box-shadow: 0 1px 5px rgba(0,0,0,0.16);
 }
 body:before {
-  height: 166px;
+  height: 180px;
   top: 0;
   position: absolute;
   width: 100%;
@@ -44,7 +44,7 @@ body:before {
   background-color: #3a3d4d;
   background-image: url("%%headerimg%%");
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 6% 0;
   content: "";
   text-indent: -9999px;
   z-index: -1;
@@ -350,25 +350,11 @@ button:focus {
   display: none !important;
 }
 .side {
-  margin: 200px 16px 0 0;
+  margin: 250px 16px 0 0;
   padding: 6px 16px;
   background-color: #fff;
   border-radius: 2px;
   box-shadow: 0 1px 5px rgba(0,0,0,0.16);
-}
-.side:after {
-  display: block;
-  margin: 10px 0;
-  padding: 10px 0;
-  color: #5b92fa;
-  content: "CSS Theme via /r/Naut";
-  text-transform: none;
-  font-size: 16px;
-  font-family: arial, sans-serif;
-  position: absolute;
-  width: 300px;
-  text-align: center;
-  right: 16px;
 }
 .side .titlebox .md h1 {
   line-height: 18px;
@@ -534,7 +520,7 @@ button:focus {
 #search {
   position: absolute;
   right: 16px;
-  top: 96px;
+  top: 150px;
   z-index: 1;
   width: 300px;
 }
@@ -639,7 +625,7 @@ button:focus {
 }
 .morelink {
   position: absolute;
-  top: 148px;
+  top: 200px;
   box-shadow: 0 1px 5px rgba(0,0,0,0.24);
   background-color: #ba2b0d;
   background-image: url("%%spritesheet%%") !important;
@@ -2323,8 +2309,8 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   display: inline-block;
 }
 .submit-page #header-bottom-left {
-  top: 36px;
-  left: 16px;
+  top: 60px;
+  left: 18%;
 }
 .submit-page .side,
 .submit-page .content h1,
