@@ -44,7 +44,7 @@ body:before {
   background-color: #3a3d4d;
   background-image: url("%%headerimg%%");
   background-repeat: no-repeat;
-  background-position: 6% 0;
+  background-position: 15% 0;
   content: "";
   text-indent: -9999px;
   z-index: -1;
@@ -54,6 +54,9 @@ body .content .sitetable .link .title a:hover {
 }
 a {
   color: #ba2b0d;
+  -webkit-transition: color 0.15s ease;
+  -moz-transition: color 0.15s ease;
+  -o-transition: color 0.15s ease;
   transition: color 0.15s ease;
 }
 a.random.choice {
@@ -114,6 +117,9 @@ textarea,
   background-color: #fff;
   border: 1px solid #e5e5e5;
   color: #707070;
+  -webkit-transition: all 0.15s ease !important;
+  -moz-transition: all 0.15s ease !important;
+  -o-transition: all 0.15s ease !important;
   transition: all 0.15s ease !important;
 }
 input:hover,
@@ -166,6 +172,9 @@ button {
   text-transform: uppercase;
   font-weight: 700;
   cursor: default;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
   height: 32px;
   font-size: 12px;
@@ -203,6 +212,9 @@ button:focus {
   font-family: arial;
   margin: 0 4px;
   vertical-align: top;
+  -webkit-transition: background-color 0.25s ease;
+  -moz-transition: background-color 0.25s ease;
+  -o-transition: background-color 0.25s ease;
   transition: background-color 0.25s ease;
   font-variant: normal;
 }
@@ -235,6 +247,9 @@ button:focus {
   font-weight: 400;
   font-size: 14px;
   font-family: Arial, sans-serif;
+  -webkit-transition: color 0.25s ease, background-color 0.25s ease;
+  -moz-transition: color 0.25s ease, background-color 0.25s ease;
+  -o-transition: color 0.25s ease, background-color 0.25s ease;
   transition: color 0.25s ease, background-color 0.25s ease;
   color: #fff;
 }
@@ -256,6 +271,9 @@ button:focus {
 #sr-header-area {
   background-color: rgba(0,0,0,0.05);
   border: 0 solid;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
   height: 24px;
   line-height: 23px;
@@ -299,6 +317,9 @@ button:focus {
 #sr-header-area .dropdown.srdrop .selected {
   background-color: transparent;
   color: rgba(255,255,255,0.6);
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
 #sr-header-area:hover .sr-bar a,
@@ -312,6 +333,9 @@ button:focus {
 #sr-header-area .dropdown.srdrop .selected:hover {
   background-color: transparent;
   border: 0 solid;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
 #header-img.default-header,
@@ -369,6 +393,9 @@ button:focus {
   border-radius: 2px;
   background-color: red-500;
   font-family: verdana, arial, sans-serif;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
   color: #fff;
   box-shadow: 0 1px 5px rgba(0,0,0,0.24);
@@ -424,6 +451,9 @@ button:focus {
   color: rgba(255,255,255,0.45);
   border: none;
   font-size: 9px;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
 .separator,
@@ -437,6 +467,9 @@ button:focus {
   background-image: url("%%spritesheet%%") !important;
   background-repeat: no-repeat !important;
   background-color: transparent;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 #mail {
@@ -469,6 +502,9 @@ button:focus {
   line-height: 1;
   -webkit-transform: translateY(112px);
   transform: translateY(112px);
+  -webkit-transition: background-color 0.25s ease, box-shadow 0.25s ease;
+  -moz-transition: background-color 0.25s ease, box-shadow 0.25s ease;
+  -o-transition: background-color 0.25s ease, box-shadow 0.25s ease;
   transition: background-color 0.25s ease, box-shadow 0.25s ease;
   background-image: url("%%spritesheet%%");
   background-position: 269px -32px;
@@ -512,6 +548,9 @@ button:focus {
   margin: 0;
   position: relative;
   top: -1px;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .loggedin .logout a {
@@ -529,6 +568,9 @@ button:focus {
   border: 0 solid;
   border-radius: 2px;
   box-shadow: 0 1px 5px rgba(0,0,0,0.24) !important;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 #search input[type=text]:hover {
@@ -590,6 +632,9 @@ button:focus {
   border: none !important;
   border-radius: 16px;
   background-color: rgba(0,0,0,0);
+  -webkit-transition: background-color 0.15s ease;
+  -moz-transition: background-color 0.15s ease;
+  -o-transition: background-color 0.15s ease;
   transition: background-color 0.15s ease;
 }
 #search input[type=submit]:hover {
@@ -612,6 +657,9 @@ button:focus {
 #search #searchexpando label {
   padding: 18px 8px 17px;
   cursor: pointer;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
 #search #searchexpando label:hover {
@@ -639,6 +687,9 @@ button:focus {
   border: none;
   text-align: left;
   padding: 0 16px;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
   font-family: verdana, arial, sans-serif;
 }
@@ -675,6 +726,9 @@ button:focus {
   letter-spacing: 0;
   z-index: 100;
   opacity: 0;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
   transition-delay: 0;
   font-weight: 400;
@@ -843,9 +897,15 @@ div.commentarea div.RES-keyNav-activeElement .md {
 }
 .res .RES-keyNav-activeElement {
   outline: 0 dashed #e0e0e0 !important;
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
 .res .entry {
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
 .res .commentarea .thing {
@@ -868,6 +928,9 @@ div.commentarea div.RES-keyNav-activeElement .md {
   border-radius: 1px;
   background-color: #4f8ef7 !important;
   box-shadow: 0 0 0 rgba(0,0,0,0);
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
 .res .thing .tagline .author.submitter:hover {
@@ -920,6 +983,9 @@ div.commentarea div.RES-keyNav-activeElement .md {
   overflow: hidden;
   max-height: 15px;
   background-color: #fafafa;
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
 .res #REScommentNavToggle:hover {
@@ -995,6 +1061,9 @@ div.commentarea div.RES-keyNav-activeElement .md {
   border: 0 solid;
   box-shadow: 0 2px 4px rgba(0,0,0,0.24);
   background-image: url("%%spritesheet%%");
+  -webkit-transition: all 0.25s ease, background-position 0.25s ease, background-color 0.5s ease;
+  -moz-transition: all 0.25s ease, background-position 0.25s ease, background-color 0.5s ease;
+  -o-transition: all 0.25s ease, background-position 0.25s ease, background-color 0.5s ease;
   transition: all 0.25s ease, background-position 0.25s ease, background-color 0.5s ease;
   outline: none !important;
 }
@@ -1023,6 +1092,9 @@ div.commentarea div.RES-keyNav-activeElement .md {
   letter-spacing: 1px;
   font-weight: 400;
   font-size: 13px;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
   pointer-events: none;
   text-indent: 0;
@@ -1053,6 +1125,9 @@ div.commentarea div.RES-keyNav-activeElement .md {
   box-shadow: 0 2px 5px rgba(0,0,0,0.12);
   color: #737373;
   font-weight: 700;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
   display: block;
   margin: 1.5em 0;
@@ -1141,6 +1216,9 @@ div.commentarea div.RES-keyNav-activeElement .md {
   font-size: 18px;
   font-family: Arial, sans-serif;
   overflow: visible;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
   line-height: 1.33;
 }
@@ -1192,6 +1270,9 @@ div.commentarea div.RES-keyNav-activeElement .md {
   color: #4f8ef7;
   font-weight: 700 !important;
   opacity: 100 !important;
+  -webkit-transition: all 0.25s ease-in-out !important;
+  -moz-transition: all 0.25s ease-in-out !important;
+  -o-transition: all 0.25s ease-in-out !important;
   transition: all 0.25s ease-in-out !important;
 }
 .link .entry .buttons li a.flairselectbtn {
@@ -1203,6 +1284,9 @@ div.commentarea div.RES-keyNav-activeElement .md {
   font-weight: 400;
   font-size: 13px;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
 .link .entry li .comments:hover {
@@ -1216,6 +1300,9 @@ div.commentarea div.RES-keyNav-activeElement .md {
   position: relative;
   top: -1px;
   color: #b3b3b3;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
 .link .domain a:hover {
@@ -1276,6 +1363,9 @@ body >.content .link .rank,
   background-color: transparent;
   width: 33px;
   border-radius: 2px;
+  -webkit-transition: background-color 0.25s ease;
+  -moz-transition: background-color 0.25s ease;
+  -o-transition: background-color 0.25s ease;
   transition: background-color 0.25s ease;
 }
 .arrow:hover {
@@ -1284,6 +1374,9 @@ body >.content .link .rank,
 .arrow.up {
   height: 20px;
   background-position: -64px 0;
+  -webkit-transition: background-color 0.25s ease;
+  -moz-transition: background-color 0.25s ease;
+  -o-transition: background-color 0.25s ease;
   transition: background-color 0.25s ease;
 }
 .arrow.upmod {
@@ -1308,6 +1401,9 @@ body >.content .link .rank,
 .arrow.down {
   height: 20px;
   background-position: -160px 0;
+  -webkit-transition: background-color 0.25s ease;
+  -moz-transition: background-color 0.25s ease;
+  -o-transition: background-color 0.25s ease;
   transition: background-color 0.25s ease;
 }
 .arrow.down:after {
@@ -1327,6 +1423,9 @@ body >.content .link .rank,
   letter-spacing: 1px;
   font-weight: 400;
   font-size: 13px;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
   pointer-events: none;
 }
@@ -1499,6 +1598,9 @@ body >.content .link .rank,
   color: #b3b3b3;
   font-size: 12px;
   font-family: arial, sans-serif;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
 .entry .buttons li a {
@@ -1507,6 +1609,9 @@ body >.content .link .rank,
   font-weight: 400;
   font-size: 13px;
   font-family: Arial, sans-serif;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
 .entry .buttons li.reported-stamp {
@@ -1522,6 +1627,9 @@ body >.content .link .rank,
   background-position: -192px -34px !important;
   opacity: 0.25 !important;
   margin-left: 2px !important;
+  -webkit-transition: opacity 0.15s ease;
+  -moz-transition: opacity 0.15s ease;
+  -o-transition: opacity 0.15s ease;
   transition: opacity 0.15s ease;
   margin-top: 1px !important;
 }
@@ -1597,6 +1705,9 @@ a.pretty-button.positive {
   box-shadow: inset 0 0 0 rgba(0,0,0,0.25);
   color: #fff;
   line-height: 15px;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 a.pretty-button.positive.pressed,
@@ -1630,7 +1741,7 @@ a.pretty-button.negative.pressed {
   padding: 8px 16px;
   line-height: 26px;
   border: none;
-  background-color: red-500;
+  background-color: #e4c041;
   color: #fff;
   box-shadow: 0 1px 5px rgba(0,0,0,0.24);
   border-radius: 2px;
@@ -1834,6 +1945,9 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   line-height: 19px;
   height: 22px;
   width: 22px;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
 .RESCloseButton:hover {
@@ -1885,13 +1999,16 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
 .top-page .content .menuarea .drop-choices.lightdrop a.choice {
   padding: 10px;
   color: #4d5763;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .top-page .content .menuarea .drop-choices.lightdrop a.choice:hover {
   background-color: #f5f8f9;
 }
 .top-page .content .menuarea .drop-choices.lightdrop a.choice.selected {
-  background-color: #4f8ef7;
+  background-color: #610801;
   color: #fff;
 }
 .top-page .content .menuarea .drop-choices.lightdrop a.choice[href*="/?t=all"] {
@@ -1934,12 +2051,18 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   border: none;
   background-image: none;
   background-color: #4f8ef7;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
 .guider_button:hover {
   background-color: rgba(79,142,247,0.75);
 }
 .x_button {
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
   box-shadow: 0 1px 4px rgba(0,0,0,0);
 }
@@ -2064,12 +2187,12 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   padding-bottom: 15px;
 }
 .comments-page .side {
-  margin-top: 312px;
+  margin-top: 362px;
 }
 .comments-page .side .linkinfo {
   position: absolute;
   right: 16px;
-  top: 200px;
+  top: 250px;
   padding: 16px;
   width: 300px;
   background-color: #fff;
@@ -2096,6 +2219,9 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
 }
 .drop-choices a.choice {
   padding: 6px;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
 .drop-choices a.choice:hover {
@@ -2160,6 +2286,9 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
 }
 .comment .expand {
   background-color: transparent;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
   color: #b3b3b3;
 }
@@ -2241,10 +2370,13 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   width: 262px;
   display: inline-block;
   text-align: center;
-  background-color: #fff;
+  background-color: #ba2b0d;
   color: #4d5763;
   text-transform: uppercase;
   font-weight: 700;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
   font-size: 16px;
   border: none;
@@ -2344,6 +2476,9 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
 .search-page #search label {
   padding: 1em;
   margin: 0.5em 0;
+  -webkit-transition: background-color 0.1s ease;
+  -moz-transition: background-color 0.1s ease;
+  -o-transition: background-color 0.1s ease;
   transition: background-color 0.1s ease;
   cursor: pointer;
   font-size: 12px;
@@ -2560,23 +2695,6 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
 #images #image-upload {
   margin: 0 0 4em;
 }
-.flair {
-  border: none;
-  border-radius: 0;
-  font-size: 12px;
-  font-family: arial, sans-serif;
-  font-weight: 400;
-  background-color: transparent;
-  color: #b3b3b3;
-  padding-left: 0;
-  margin-right: inherit;
-}
-.flair:before {
-  margin-right: 3px;
-  height: auto;
-  content: "- ";
-  margin-left: 4px;
-}
 .listing-page .comment {
   background-color: #fff;
   margin-left: 0;
@@ -2682,6 +2800,9 @@ html.res-commentBoxes .comment {
   background: url("%%spritesheet%%") 0 0 !important;
   position: relative;
   top: 2px;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 #RESMainGearOverlay {
@@ -2700,6 +2821,9 @@ html.res-commentBoxes .comment {
   background-color: red-500;
   color: #fff;
   border-color: #4258ca;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
 .RESDropdownList li:first-letter {
@@ -2733,6 +2857,9 @@ html.res-commentBoxes .comment {
   background-color: transparent;
   color: rgba(255,255,255,0.6);
   border: 1px solid #4258ca;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
   border-radius: 2px;
 }
@@ -2744,6 +2871,9 @@ html.res-commentBoxes .comment {
   color: red-500;
   font-weight: bolder;
   border: 1px solid #fff;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
   border-radius: 2px;
 }
@@ -2752,11 +2882,29 @@ html.res-commentBoxes .comment {
   border-radius: 1px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.12);
 }
-.flair-inkhorn {
+.flair {
+  border: none;
+  font-size: 12px;
+  font-family: arial, sans-serif;
+  font-weight: 400;
+  background-color: transparent;
+  color: #b3b3b3;
+  padding-left: 0;
+  margin-right: inherit;
+  border-radius: 2px;
+  margin-left: 10px;
+}
+.flair-inkhorngames {
   color: #095369;
-  background-color: #fcfcfd;
+  background-color: #ffa364;
   border-radius: 2px;
   border-color: #2d93c5;
-  padding: 4px 5px;
+  padding: 2px 5px 2px 2px;
   font-size: 9px;
+}
+.flair-inkhorngames:before {
+  margin-right: 3px;
+  height: auto;
+  content: "★ ";
+  margin-left: 4px;
 }
