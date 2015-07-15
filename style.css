@@ -50,7 +50,7 @@ body:before {
   z-index: -1;
 }
 body .content .sitetable .link .title a:hover {
-  color: #4f8ef7;
+  color: #ba2b0d;
 }
 a {
   color: #ba2b0d;
@@ -157,7 +157,7 @@ textarea:active,
 .login-form-side input[type=text]:active,
 .login-form-side input[type=password]:active {
   outline: none !important;
-  border-color: #4f8ef7;
+  border-color: #ba2b0d;
   color: #4d5763;
 }
 .btn,
@@ -269,7 +269,7 @@ button:focus {
   background-color: rgba(0,0,0,0.08);
 }
 #sr-header-area {
-  background-color: rgba(0,0,0,0.05);
+  background-color: rgba(0,0,0,0.5);
   border: 0 solid;
   -webkit-transition: all 0.15s ease;
   -moz-transition: all 0.15s ease;
@@ -694,7 +694,7 @@ button:focus {
   font-family: verdana, arial, sans-serif;
 }
 .morelink:hover {
-  background-color: #610801;
+  background-color: #8c0d03;
   box-shadow: 0 5px 8px rgba(0,0,0,0.24);
 }
 .morelink:hover:after {
@@ -797,7 +797,7 @@ button:focus {
   margin-top: 16px;
 }
 .titlebox .tagline a.flairselectbtn {
-  color: #4f8ef7;
+  color: #ba2b0d;
 }
 .titlebox .tagline a.flairselectbtn:after {
   content: " flair";
@@ -827,7 +827,7 @@ button:focus {
   visibility: visible;
   margin-top: 40px;
   color: #fff;
-  background-color: red-500;
+  background-color: rgba(0,0,0,0.5);
   box-shadow: 0 1px 5px rgba(0,0,0,0.24);
 }
 .titlebox .fancy-toggle-button .add:active {
@@ -926,7 +926,7 @@ div.commentarea div.RES-keyNav-activeElement .md {
 .res .thing .tagline .author.submitter {
   padding: 1px 4px;
   border-radius: 1px;
-  background-color: #4f8ef7 !important;
+  background-color: #ba2b0d !important;
   box-shadow: 0 0 0 rgba(0,0,0,0);
   -webkit-transition: all 0.15s ease;
   -moz-transition: all 0.15s ease;
@@ -935,7 +935,7 @@ div.commentarea div.RES-keyNav-activeElement .md {
 }
 .res .thing .tagline .author.submitter:hover {
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  background-color: #4f8ef7 !important;
+  background-color: #ba2b0d !important;
 }
 .res .thing .tagline .author.moderator {
   background-color: #65b354 !important;
@@ -1149,10 +1149,10 @@ div.commentarea div.RES-keyNav-activeElement .md {
   border: solid 1px #e5e5e5;
 }
 .md a {
-  color: #4f8ef7;
+  color: #ba2b0d;
 }
 .md a:visited {
-  color: #7d5d8a;
+  color: #454545;
 }
 .md pre {
   padding: 8px;
@@ -1231,7 +1231,7 @@ div.commentarea div.RES-keyNav-activeElement .md {
   color: #4d5763;
 }
 .link .entry .tagline a:hover {
-  color: #4f8ef7;
+  color: #ba2b0d;
   text-decoration: none;
 }
 .link .entry .tagline a.author {
@@ -1263,11 +1263,11 @@ div.commentarea div.RES-keyNav-activeElement .md {
   background-color: #65b354;
 }
 .link .entry .buttons li a:hover {
-  color: #4f8ef7;
+  color: #8c0d03;
   text-decoration: none;
 }
 .link .entry .buttons li a.comments {
-  color: #4f8ef7;
+  color: #ba2b0d;
   font-weight: 700 !important;
   opacity: 100 !important;
   -webkit-transition: all 0.25s ease-in-out !important;
@@ -1276,7 +1276,7 @@ div.commentarea div.RES-keyNav-activeElement .md {
   transition: all 0.25s ease-in-out !important;
 }
 .link .entry .buttons li a.flairselectbtn {
-  color: #4f8ef7;
+  color: #ba2b0d;
 }
 .link .entry .buttons li .redditSingleClick {
   padding: 0 1px;
@@ -1306,7 +1306,7 @@ div.commentarea div.RES-keyNav-activeElement .md {
   transition: all 0.15s ease;
 }
 .link .domain a:hover {
-  color: #4f8ef7;
+  color: #ba2b0d;
   text-decoration: none;
 }
 .link .usertext .md {
@@ -1384,20 +1384,6 @@ body >.content .link .rank,
   background-position: -128px 0;
   position: relative;
 }
-.arrow.upmod:focus:after {
-  position: absolute;
-  left: 2px;
-  bottom: -3px;
-  width: 28px;
-  height: 28px;
-  opacity: 1;
-  z-index: 100;
-  content: " ";
-  background-color: #f50;
-  border-radius: 28px;
-  animation: upvote 0.35s ease-out forwards;
-  -webkit-animation: upvote 0.35s ease-out forwards;
-}
 .arrow.down {
   height: 20px;
   background-position: -160px 0;
@@ -1414,7 +1400,7 @@ body >.content .link .rank,
   margin-top: -6px;
   margin-left: 32px;
   padding: 12px;
-  background-color: rgba(79,77,192,0);
+  background-color: rgba(0,0,0,0.7);
   border: none;
   border-radius: 2px;
   color: rgba(255,255,255,0);
@@ -1431,7 +1417,7 @@ body >.content .link .rank,
 }
 .arrow.down:hover:after {
   visibility: visible;
-  background-color: rgba(79,77,192,0.9);
+  background-color: rgba(0,0,0,0.7);
   color: #fff;
   margin-left: 48px;
 }
@@ -1472,7 +1458,7 @@ body >.content .link .rank,
   vertical-align: middle;
   position: relative;
   top: -2px;
-  background-color: #4f8ef7;
+  background-color: #ba2b0d;
 }
 .linkflair-inspiration .linkflairlabel {
   background-color: #ea4848;
@@ -1503,15 +1489,15 @@ body >.content .link .rank,
 .thing .title.click,
 .thing .title.loggedin,
 .thing .title {
-  color: #4f8ef7;
+  color: #ba2b0d;
 }
 .content .thing .title:visited,
 .content .thing.visited .title {
-  color: #7d5d8a;
+  color: #454545;
 }
 .thing .title.loggedin.click:visited,
 .thing .title.click:visited {
-  color: #4f8ef7;
+  color: #ba2b0d;
 }
 .approval-checkmark {
   cursor: default;
@@ -1530,8 +1516,8 @@ body >.content .link .rank,
   cursor: pointer;
 }
 .expando-button:hover {
-  background-color: #4f8ef7;
-  border-color: #4f8ef7;
+  background-color: #ba2b0d;
+  border-color: #ba2b0d;
 }
 .expando-button.selftext.collapsed {
   background-position: -32px -32px !important;
@@ -1731,7 +1717,7 @@ a.pretty-button.negative.pressed {
 }
 .tagline .submitter {
   font-weight: 700;
-  color: #4f8ef7;
+  color: #ba2b0d;
 }
 .content .spacer {
   margin: 0;
@@ -1804,7 +1790,7 @@ a.pretty-button.negative.pressed {
 .flairselector h2 {
   margin-bottom: 4px;
   background-color: transparent;
-  color: #4f8ef7;
+  color: #ba2b0d;
   text-align: left;
   text-transform: capitalize;
   font-weight: 400;
@@ -1833,7 +1819,7 @@ a.pretty-button.negative.pressed {
 .flairselector form .flairselection .linkflair a.title {
   font-size: 18px !important;
   opacity: 100 !important;
-  color: #4f8ef7 !important;
+  color: #ba2b0d !important;
   cursor: default;
 }
 .flairselector form .flairselection .flairremove {
@@ -1845,7 +1831,7 @@ a.pretty-button.negative.pressed {
 .flairselector form .flairselection .flairremove a {
   visibility: visible;
   opacity: 100 !important;
-  color: #4f8ef7 !important;
+  color: #ba2b0d !important;
   margin-left: -4px;
   text-transform: capitalize;
 }
@@ -1892,7 +1878,7 @@ a.pretty-button.negative.pressed {
 .flairoptionpane ul li .linkflair a.title {
   font-size: 18px !important;
   opacity: 100 !important;
-  color: #4f8ef7 !important;
+  color: #ba2b0d !important;
 }
 .flairoptionpane ul li .linkflair:hover,
 .flairselector li:hover {
@@ -1915,7 +1901,7 @@ div.RES-keyNav-activeElement,
 div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   background-color: transparent !important;
   padding-left: 8px !important;
-  border-left: 2px solid #4f8ef7;
+  border-left: 2px solid #ba2b0d;
 }
 .userTagLink.hasTag,
 #userTaggerPreview {
@@ -1931,7 +1917,7 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   margin-top: 8px;
 }
 .RESDialogSmall > h3 {
-  color: #4f8ef7;
+  color: #ba2b0d;
   background-color: #fff;
   border-bottom: 1px solid #ededed;
   height: 36px;
@@ -1964,8 +1950,8 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
 }
 .toggleButton .toggleOn {
   border-radius: 0;
-  border: 1px solid #4f8ef7;
-  background-color: #4f8ef7;
+  border: 1px solid #ba2b0d;
+  background-color: #ba2b0d;
   color: #fff;
   text-transform: capitalize;
 }
@@ -2044,13 +2030,13 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   box-shadow: 0 2px 3px #ddd;
 }
 .guider_content h1 {
-  color: #4f8ef7;
+  color: #ba2b0d;
 }
 .guider_button {
   font-size: 11px;
   border: none;
   background-image: none;
-  background-color: #4f8ef7;
+  background-color: #ba2b0d;
   -webkit-transition: all 0.15s ease;
   -moz-transition: all 0.15s ease;
   -o-transition: all 0.15s ease;
@@ -2106,7 +2092,7 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   color: #b3b3b3;
 }
 .commentarea .menuarea .dropdown.lightdrop .selected:hover {
-  color: #4f8ef7;
+  color: #ba2b0d;
 }
 .commentarea .menuarea .dropdown.lightdrop .selected:after {
   content: "▼";
@@ -2225,7 +2211,7 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   transition: all 0.1s ease;
 }
 .drop-choices a.choice:hover {
-  background-color: #4f8ef7;
+  background-color: #ba2b0d;
   color: #fff;
 }
 .commentarea .menuarea .toggle a,
@@ -2235,7 +2221,7 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
 }
 .commentarea .menuarea .toggle a:hover,
 .help-hoverable:hover {
-  color: #4f8ef7;
+  color: #ba2b0d;
 }
 .usertext button {
   margin: 4px 16px 8px 0;
@@ -2247,10 +2233,10 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   color: #b3b3b3;
 }
 .usertext .bottom-area a.reddiquette {
-  color: #4f8ef7;
+  color: #ba2b0d;
 }
 .usertext .bottom-area a:hover {
-  color: #4f8ef7;
+  color: #ba2b0d;
 }
 .usertext.grayed .usertext-body {
   margin: 4px 0;
@@ -2295,7 +2281,7 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
 .comment .expand:hover {
   color: #fff;
   text-decoration: none;
-  background-color: #4f8ef7;
+  background-color: #ba2b0d;
 }
 .comment .author {
   color: #4d5763;
@@ -2303,7 +2289,7 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   font-weight: 700;
 }
 .comment .author:hover {
-  color: #4f8ef7;
+  color: #ba2b0d;
   text-decoration: none;
 }
 .comment .score {
@@ -2326,11 +2312,11 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   font-size: 10px;
 }
 .comment .flat-list li a:hover {
-  color: #4f8ef7;
+  color: #ba2b0d;
   text-decoration: none;
 }
 .comment .flat-list li a[onclick*="reply"] {
-  color: #4f8ef7;
+  color: #ba2b0d;
   font-weight: 700;
   font-size: 11px;
 }
@@ -2346,7 +2332,7 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   color: #4d5763;
 }
 .deepthread a {
-  color: #4f8ef7;
+  color: #ba2b0d;
 }
 .linkinfo .shortlink input {
   border: 1px solid #e5e5e5;
@@ -2370,7 +2356,7 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   width: 262px;
   display: inline-block;
   text-align: center;
-  background-color: #ba2b0d;
+  background-color: #fff;
   color: #4d5763;
   text-transform: uppercase;
   font-weight: 700;
@@ -2380,17 +2366,15 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   transition: all 0.25s ease;
   font-size: 16px;
   border: none;
+  border-bottom: 2px solid transparent;
 }
 .submit-page #newlink.submit.content .tabmenu.formtab a:hover {
-  background-color: #e7e9f6;
+  background-color: #fafafa;
 }
 .submit-page #newlink.submit.content .tabmenu.formtab .selected a {
   font-size: 16px;
-  background-color: red-500;
+  background-color: #e4c041;
   color: #fff;
-}
-.submit-page #newlink.submit.content .tabmenu.formtab .selected a:hover {
-  background-color: #6379ea;
 }
 .submit-page #newlink.submit.content .btn {
   width: 100%;
@@ -2573,8 +2557,8 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
 }
 .wiki-page .pageactions .wikiaction-current {
   padding: 10px 16px 7px;
-  border-bottom: 4px solid #4f8ef7;
-  color: #4f8ef7;
+  border-bottom: 4px solid #ba2b0d;
+  color: #ba2b0d;
 }
 .wiki-page .wiki-page-content {
   margin: 16px 0;
@@ -2616,7 +2600,7 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   width: 531px;
 }
 .linefield .title {
-  color: #4f8ef7;
+  color: #ba2b0d;
   text-transform: capitalize;
 }
 .linefield .title:first-letter,
@@ -2650,7 +2634,7 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   font-size: 14px;
 }
 .tabmenu li.selected a {
-  color: #4f8ef7;
+  color: #ba2b0d;
   background-color: transparent;
   border: none;
 }
@@ -2661,7 +2645,7 @@ div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
   color: #b3b3b3;
 }
 .tabpane-content .tagline a {
-  color: #4f8ef7;
+  color: #ba2b0d;
 }
 .tabpane-content .thing .title {
   overflow: visible;
@@ -2790,7 +2774,7 @@ html.res-commentBoxes .comment {
 .res .RESshortcutside:hover,
 .res .RESDashboardToggle:hover {
   background-color: transparent;
-  color: #4f8ef7;
+  color: #ba2b0d;
 }
 .res .titlebox .fancy-toggle-button .add,
 .res .fancy-toggle-button .remove {
@@ -2895,10 +2879,9 @@ html.res-commentBoxes .comment {
   margin-left: 10px;
 }
 .flair-inkhorngames {
-  color: #095369;
-  background-color: #ffa364;
+  color: #fff;
+  background-color: #ba2b0d;
   border-radius: 2px;
-  border-color: #2d93c5;
   padding: 2px 5px 2px 2px;
   font-size: 9px;
 }

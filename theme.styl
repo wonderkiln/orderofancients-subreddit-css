@@ -55,7 +55,7 @@ body
 				.title
 					a
 						&:hover
-							color #4F8EF7
+							color red-600
 
 a
 	color red-600
@@ -106,7 +106,7 @@ input:hover,textarea:hover,.roundfield textarea:hover,.roundfield input[type=tex
 
 input:active,textarea:active,.roundfield textarea:active,.roundfield input[type=text]:active,.roundfield input[type=url]:active,.roundfield input[type=password]:active,.roundfield input[type=number]:active,.linefield textarea:active,.linefield input[type=text]:active,.linefield input[type=password]:active,.pretty-form input[type=text]:active,.pretty-form textarea:active,.pretty-form input[type=password]:active,.pretty-form input[type=number]:active,.login-form-side input[type=text]:active,.login-form-side input[type=password]:active
 	outline none!important
-	border-color #4F8EF7
+	border-color red-600
 	color #4D5763
 
 .btn,button
@@ -198,7 +198,7 @@ input:active,textarea:active,.roundfield textarea:active,.roundfield input[type=
 						background-color rgba(0,0,0,0.08)
 
 #sr-header-area
-	background-color rgba(0,0,0,0.05)
+	background-color rgba(0,0,0,0.5)
 	border 0 solid
 	transition all .15s ease
 	height 24px
@@ -534,7 +534,7 @@ input:active,textarea:active,.roundfield textarea:active,.roundfield input[type=
 	transition all .25s ease
 	font-family verdana,arial,sans-serif
 	&:hover
-		background-color red-900
+		background-color red-700
 		box-shadow 0 5px 8px rgba(0,0,0,0.24)
 		&:after
 			margin-top 16px
@@ -619,7 +619,7 @@ input:active,textarea:active,.roundfield textarea:active,.roundfield input[type=
 			margin-top 16px
 		a
 			&.flairselectbtn
-				color #4F8EF7
+				color red-600
 				&:after
 					content " flair"
 		.flair
@@ -644,7 +644,7 @@ input:active,textarea:active,.roundfield textarea:active,.roundfield input[type=
 					visibility visible
 					margin-top 40px
 					color #fff
-					background-color red-500
+					background-color rgba(0,0,0,.5)
 					box-shadow 0 1px 5px rgba(0,0,0,0.24)
 			&:active
 				background-color #fff
@@ -730,12 +730,12 @@ div
 				&.submitter
 					padding 1px 4px
 					border-radius 1px
-					background-color #4F8EF7!important
+					background-color red-600!important
 					box-shadow 0 0 0 rgba(0,0,0,0)
 					transition all .15s ease
 					&:hover
 						box-shadow 0 2px 4px rgba(0,0,0,0.2)
-						background-color #4F8EF7!important
+						background-color red-600!important
 				&.moderator
 					background-color #65B354!important
 					padding 1px 4px
@@ -912,9 +912,9 @@ div
 	hr
 		border solid 1px #e5e5e5
 	a
-		color #4F8EF7
+		color red-600
 		&:visited
-			color #7D5D8A
+			color #454545
 	pre
 		padding 8px
 	blockquote
@@ -979,7 +979,7 @@ div
 			a
 				color #4d5763
 				&:hover
-					color #4F8EF7
+					color red-600
 					text-decoration none
 				&.author
 					margin-right inherit
@@ -1007,15 +1007,15 @@ div
 			li
 				a
 					&:hover
-						color #4F8EF7
+						color red-700
 						text-decoration none
 					&.comments
-						color #4F8EF7
+						color red-600
 						font-weight 700!important
 						opacity 100!important
 						transition all .25s ease-in-out!important
 					&.flairselectbtn
-						color #4F8EF7
+						color red-600
 				.redditSingleClick
 					padding 0 1px
 					color #b3b3b3
@@ -1036,7 +1036,7 @@ div
 			color #b3b3b3
 			transition all .15s ease
 			&:hover
-				color #4F8EF7
+				color red-600
 				text-decoration none
 	.usertext
 		.md
@@ -1095,20 +1095,20 @@ body >.content .link .rank,.rank-spacer
 		height 20px
 		background-position -128px 0
 		position relative
-		&:focus
-			&:after
-				position absolute
-				left 2px
-				bottom -3px
-				width 28px
-				height 28px
-				opacity 1
-				z-index 100
-				content " "
-				background-color #f50
-				border-radius 28px
-				animation upvote .35s ease-out forwards
-				-webkit-animation upvote .35s ease-out forwards
+		// &:focus
+		// 	&:after
+		// 		position absolute
+		// 		left 2px
+		// 		bottom -3px
+		// 		width 28px
+		// 		height 28px
+		// 		opacity 1
+		// 		z-index 100
+		// 		content " "
+		// 		background-color transparent
+		// 		border-radius 28px
+		// 		animation upvote .35s ease-out forwards
+		// 		-webkit-animation upvote .35s ease-out forwards
 	&.down
 		height 20px
 		background-position -160px 0
@@ -1121,7 +1121,7 @@ body >.content .link .rank,.rank-spacer
 			margin-top -6px
 			margin-left 32px
 			padding 12px
-			background-color rgba(79,77,192,0.0)
+			background-color rgba(0,0,0,.7)
 			border none
 			border-radius 2px
 			color rgba(255,255,255,0)
@@ -1135,7 +1135,7 @@ body >.content .link .rank,.rank-spacer
 		&:hover
 			&:after
 				visibility visible
-				background-color rgba(79,77,192,0.9)
+				background-color rgba(0,0,0,.7)
 				color #FFF
 				margin-left 48px
 	&.downmod
@@ -1171,7 +1171,7 @@ body >.content .link .rank,.rank-spacer
 	vertical-align middle
 	position relative
 	top -2px
-	background-color #4F8EF7
+	background-color red-600
 
 .linkflair-inspiration
 	.linkflairlabel
@@ -1200,13 +1200,13 @@ body >.content .link .rank,.rank-spacer
 	background url(%%spritesheet%%) -3px -80px!important
 
 .thing .title.loggedin.click,.thing .title.click,.thing .title.loggedin,.thing .title
-	color #4F8EF7
+	color red-600
 
 .content .thing .title:visited,.content .thing.visited .title
-	color #7D5D8A
+	color #454545
 
 .thing .title.loggedin.click:visited,.thing .title.click:visited
-	color #4F8EF7
+	color red-600
 
 .approval-checkmark
 	cursor default
@@ -1224,8 +1224,8 @@ body >.content .link .rank,.rank-spacer
 
 .expando-button
 	&:hover
-		background-color #4F8EF7
-		border-color #4F8EF7
+		background-color red-600
+		border-color red-600
 	&.selftext
 		&.collapsed
 			background-position -32px -32px!important
@@ -1386,7 +1386,7 @@ a.pretty-button.positive.pressed,a.pretty-button.neutral.pressed,a.pretty-button
 		cursor help
 	.submitter
 		font-weight 700
-		color #4f8ef7
+		color red-600
 
 .content
 	.spacer
@@ -1451,7 +1451,7 @@ a.pretty-button.positive.pressed,a.pretty-button.neutral.pressed,a.pretty-button
 	h2
 		margin-bottom 4px
 		background-color transparent
-		color #4F8EF7
+		color red-600
 		text-align left
 		text-transform capitalize
 		font-weight 400
@@ -1478,7 +1478,7 @@ a.pretty-button.positive.pressed,a.pretty-button.neutral.pressed,a.pretty-button
 					&.title
 						font-size 18px!important
 						opacity 100!important
-						color #4F8EF7!important
+						color red-600!important
 						cursor default
 			.flairremove
 				padding 4px 0
@@ -1488,7 +1488,7 @@ a.pretty-button.positive.pressed,a.pretty-button.neutral.pressed,a.pretty-button
 				a
 					visibility visible
 					opacity 100!important
-					color #4F8EF7!important
+					color red-600!important
 					margin-left -4px
 					text-transform capitalize
 					&:first-letter
@@ -1530,7 +1530,7 @@ a.pretty-button.positive.pressed,a.pretty-button.neutral.pressed,a.pretty-button
 					&.title
 						font-size 18px!important
 						opacity 100!important
-						color #4F8EF7!important
+						color red-600!important
 
 .flairoptionpane ul li .linkflair:hover,.flairselector li:hover
 	background-color #F5F8F9
@@ -1549,7 +1549,7 @@ a.pretty-button.positive.pressed,a.pretty-button.neutral.pressed,a.pretty-button
 div.RES-keyNav-activeElement,div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed
 	background-color transparent!important
 	padding-left 8px!important
-	border-left 2px solid #4F8EF7
+	border-left 2px solid red-600
 
 .userTagLink.hasTag,#userTaggerPreview
 	font-size 11px!important
@@ -1563,7 +1563,7 @@ div.RES-keyNav-activeElement,div.commentarea div.RES-keyNav-activeElement.entry 
 	box-shadow 0 2px 3px rgba(0,0,0,0.12)
 	margin-top 8px
 	& > h3
-		color #4F8EF7
+		color red-600
 		background-color #FFF
 		border-bottom 1px solid #EDEDED
 		height 36px
@@ -1591,8 +1591,8 @@ div.RES-keyNav-activeElement,div.commentarea div.RES-keyNav-activeElement.entry 
 	line-height .8
 	.toggleOn
 		border-radius 0
-		border 1px solid #4F8EF7
-		background-color #4F8EF7
+		border 1px solid red-600
+		background-color red-600
 		color #fff
 		text-transform capitalize
 	.toggleOff
@@ -1668,13 +1668,13 @@ div.RES-keyNav-activeElement,div.commentarea div.RES-keyNav-activeElement.entry 
 
 .guider_content
 	h1
-		color #4F8EF7
+		color red-600
 
 .guider_button
 	font-size 11px
 	border none
 	background-image none
-	background-color #4F8EF7
+	background-color red-600
 	transition all .15s ease
 	&:hover
 		background-color rgba(79,142,247,0.75)
@@ -1720,7 +1720,7 @@ div.RES-keyNav-activeElement,div.commentarea div.RES-keyNav-activeElement.entry 
 					font-weight 400
 					color #b3b3b3
 					&:hover
-						color #4F8EF7
+						color red-600
 					&:after
 						content "▼"
 	& > .usertext
@@ -1825,7 +1825,7 @@ div.RES-keyNav-activeElement,div.commentarea div.RES-keyNav-activeElement.entry 
 			padding 6px
 			transition all .1s ease
 			&:hover
-				background-color #4F8EF7
+				background-color red-600
 				color #fff
 
 .commentarea .menuarea .toggle a,.help-hoverable
@@ -1833,7 +1833,7 @@ div.RES-keyNav-activeElement,div.commentarea div.RES-keyNav-activeElement.entry 
 	font-weight 400
 
 .commentarea .menuarea .toggle a:hover,.help-hoverable:hover
-	color #4F8EF7
+	color red-600
 
 .usertext
 	button
@@ -1843,9 +1843,9 @@ div.RES-keyNav-activeElement,div.commentarea div.RES-keyNav-activeElement.entry 
 		a
 			color #b3b3b3
 			&.reddiquette
-				color #4F8EF7
+				color red-600
 			&:hover
-				color #4f8ef7
+				color red-600
 	&.grayed
 		.usertext-body
 			margin 4px 0
@@ -1886,13 +1886,13 @@ div.RES-keyNav-activeElement,div.commentarea div.RES-keyNav-activeElement.entry 
 		&:hover
 			color #fff
 			text-decoration none
-			background-color #4F8EF7
+			background-color red-600
 	.author
 		color #4D5763
 		margin-right 0
 		font-weight 700
 		&:hover
-			color #4f8ef7
+			color red-600
 			text-decoration none
 	.score
 		font-size inherit
@@ -1913,10 +1913,10 @@ div.RES-keyNav-activeElement,div.commentarea div.RES-keyNav-activeElement.entry 
 				font-weight 400
 				font-size 10px
 				&:hover
-					color #4F8EF7
+					color red-600
 					text-decoration none
 			a[onclick*="reply"]
-				color #4F8EF7
+				color red-600
 				font-weight 700
 				font-size 11px
 
@@ -1931,7 +1931,7 @@ div.RES-keyNav-activeElement,div.commentarea div.RES-keyNav-activeElement.entry 
 
 .deepthread
 	a
-		color #4F8EF7
+		color red-600
 
 .linkinfo
 	.shortlink
@@ -1962,22 +1962,25 @@ div.RES-keyNav-activeElement,div.commentarea div.RES-keyNav-activeElement.entry 
 							width 262px
 							display inline-block
 							text-align center
-							background-color red-600
+							background-color #FFFFFF
 							color #4D5763
 							text-transform uppercase
 							font-weight 700
 							transition all .25s ease
 							font-size 16px
 							border none
+							border-bottom 2px solid transparent
 							&:hover
-								background-color #e7e9f6
+								background-color rgb(250,250,250)
 						.selected
 							a
 								font-size 16px
-								background-color red-500
-								color #fff
-								&:hover
-									background-color #6379ea
+								background-color yellow-600
+								color #FFFFFF
+								// background-color red-500
+								// color #fff
+								// &:hover
+								// background-color #6379ea
 				.btn
 					width 100%
 					line-height 41px
@@ -2137,8 +2140,8 @@ div.RES-keyNav-activeElement,div.commentarea div.RES-keyNav-activeElement.entry 
 			color #B3B3B3
 		.wikiaction-current
 			padding 10px 16px 7px
-			border-bottom 4px solid #4F8EF7
-			color #4F8EF7
+			border-bottom 4px solid red-600
+			color red-600
 	.wiki-page-content
 		margin 16px 0
 		background-color #fff
@@ -2173,7 +2176,7 @@ div.RES-keyNav-activeElement,div.commentarea div.RES-keyNav-activeElement.entry 
 	margin 0 0 8px
 	width 531px
 	.title
-		color #4F8EF7
+		color red-600
 		text-transform capitalize
 
 .linefield .title:first-letter,.linefield label:first-letter
@@ -2204,7 +2207,7 @@ div.RES-keyNav-activeElement,div.commentarea div.RES-keyNav-activeElement.entry 
 			font-size 14px
 		&.selected
 			a
-				color #4F8EF7
+				color red-600
 				background-color transparent
 				border none
 
@@ -2216,7 +2219,7 @@ div.RES-keyNav-activeElement,div.commentarea div.RES-keyNav-activeElement.entry 
 				color #b3b3b3
 	.tagline
 		a
-			color #4F8EF7
+			color red-600
 	.thing
 		.title
 			overflow visible
@@ -2332,7 +2335,7 @@ html
 
 .res .RESshortcutside:hover,.res .RESDashboardToggle:hover
 	background-color transparent
-	color #4F8EF7
+	color red-600
 
 .res .titlebox .fancy-toggle-button .add,.res .fancy-toggle-button .remove
 	top -78px
